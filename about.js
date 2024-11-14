@@ -81,4 +81,3 @@ function toggleSkillInfo(element) {
     const skillName = element.querySelector('.skill-name');
     skillName.classList.toggle('visible');
 }
-
