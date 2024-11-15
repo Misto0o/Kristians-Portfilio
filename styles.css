@@ -76,6 +76,10 @@ header h1 {
     color: #2a9d8f;
 }
 
+.navbar a:hover, .navbar-item:hover {
+    color: #2a9d8f;
+}
+
 /* Hero Section */
 #landing {
     height: 100vh;

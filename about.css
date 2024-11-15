@@ -19,17 +19,8 @@ header.navbar {
     align-items: center;
 }
 
-.navbar-brand h1 {
-    font-size: 1.8rem;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-weight: bold;
-    text-align: center;
-}
-
-.navbar a, .navbar-item {
-    color: #c9d1d9;
+.navbar a {
+    color: black;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
@@ -40,6 +31,7 @@ header.navbar {
     transition: all 0.3s ease;
     text-align: center;
 }
+
 
 .navbar a::before {
     content: '';
@@ -61,14 +53,6 @@ header.navbar {
 
 .navbar a:hover, .navbar-item:hover {
     color: #2a9d8f;
-}
-
-.navbar-burger span {
-    background-color: #c9d1d9;
-}
-
-.navbar-burger a{
-    color:white;
 }
 
 /* About Section */
