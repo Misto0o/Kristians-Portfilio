@@ -137,26 +137,10 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("load", checkScreenSize);
     window.addEventListener("resize", checkScreenSize);
 
-    // Scroll progress bar (adds a visual indication of page scrolling)
-    const progressBar = document.createElement('div');
-    progressBar.style.position = 'fixed';
-    progressBar.style.top = '0';
-    progressBar.style.left = '0';
-    progressBar.style.height = '5px';
-    progressBar.style.backgroundColor = '#FFD700'; // Gold color for progress
-    progressBar.style.zIndex = '9999';
-    document.body.appendChild(progressBar);
-
     window.addEventListener('scroll', function () {
         const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
         const scrollPosition = window.scrollY;
         const scrollPercentage = (scrollPosition / scrollHeight) * 100;
         progressBar.style.width = `${scrollPercentage}%`;
-    });
-
-    // Lazy load images for performance (optional)
-    const images = document.querySelectorAll('img[data-src]');
-    images.forEach(img => {
-        img.src = img.getAttribute('data-src');
     });
 });

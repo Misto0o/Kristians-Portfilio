@@ -65,19 +65,23 @@ document.addEventListener("DOMContentLoaded", function () {
     // Call animations on page load
     initAnimations();
 
-    // Function to check screen size
+    // Function to check screen size and adjust layout
     function checkScreenSize() {
         const isMobile = window.matchMedia("(max-width: 768px)").matches;
         const navLinks = document.querySelector(".nav-links");
 
         // Adjust styles based on screen width
-        if (navLinks) {
-            navLinks.style.flexDirection = isMobile ? "column" : "row";
-        }
+        navLinks.style.flexDirection = isMobile ? "column" : "row";
     }
-});
 
-function toggleSkillInfo(element) {
-    const skillName = element.querySelector('.skill-name');
-    skillName.classList.toggle('visible');
-}
+    // Call the function on page load and on window resize
+    window.addEventListener("load", checkScreenSize);
+    window.addEventListener("resize", checkScreenSize);
+
+    window.addEventListener('scroll', function () {
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const scrollPosition = window.scrollY;
+        const scrollPercentage = (scrollPosition / scrollHeight) * 100;
+        progressBar.style.width = `${scrollPercentage}%`;
+    });
+})

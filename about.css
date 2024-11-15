@@ -385,4 +385,13 @@ footer {
     .certification-card {
         width: 90%;
     }
+    .navbar {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .navbar a {
+        font-size: 0.9rem;
+    }
+
 }
