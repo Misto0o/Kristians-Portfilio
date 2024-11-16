@@ -28,60 +28,66 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }, 100);
 
-    // Menu toggle functionality
-    const menuToggle = document.querySelector('.navbar-burger');
-    const navLinks = document.getElementById('nav-links');
+    function initMenuToggle() {
+        const menuToggle = document.querySelector(".navbar-burger");
+        const navLinks = document.getElementById("nav-links");
 
-    // Toggle menu on burger icon click
-    menuToggle.addEventListener('click', function () {
-        navLinks.classList.toggle('is-active'); // Toggle Bulma's 'is-active' class
-        menuToggle.classList.toggle('is-active'); // Toggle burger icon
-    });
-
-    // Close the menu when a link is clicked (for mobile)
-    navLinks.addEventListener('click', function () {
-        navLinks.classList.remove('is-active'); // Remove 'is-active' class
-        menuToggle.classList.remove('is-active'); // Close the burger icon
-    });
-
-
-    // Smooth scroll for links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href');
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                targetElement.scrollIntoView({ behavior: 'smooth' });
-                navLinks.classList.remove('active'); // Close menu on link click
-            }
+        // Toggle menu on burger icon click
+        menuToggle.addEventListener("click", () => {
+            navLinks.classList.toggle("is-active"); // Toggle 'is-active' class for menu
+            menuToggle.classList.toggle("is-active"); // Toggle 'is-active' for burger icon
         });
-    });
 
-    // Call the function on page load and on window resize
-    window.addEventListener("load", checkScreenSize);
-    window.addEventListener("resize", checkScreenSize);
+        // Close the menu when a link is clicked
+        navLinks.addEventListener("click", () => {
+            navLinks.classList.remove("is-active");
+            menuToggle.classList.remove("is-active");
+        });
+    }
 
-    // Call animations on page load
-    initAnimations();
+    /**
+     * Smooth scroll for anchor links
+     */
+    function initSmoothScroll() {
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+            anchor.addEventListener("click", (e) => {
+                e.preventDefault();
+                const targetId = anchor.getAttribute("href");
+                const targetElement = document.querySelector(targetId);
 
-    // Function to check screen size and adjust layout
+                if (targetElement) {
+                    targetElement.scrollIntoView({ behavior: "smooth" });
+                    // Close menu on link click (for mobile)
+                    const navLinks = document.getElementById("nav-links");
+                    navLinks.classList.remove("is-active");
+                }
+            });
+        });
+    }
+
+    /**
+     * Adjust layout based on screen size
+     */
     function checkScreenSize() {
         const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        const navLinks = document.querySelector(".nav-links");
+        const navLinks = document.getElementById("nav-links");
 
         // Adjust styles based on screen width
         navLinks.style.flexDirection = isMobile ? "column" : "row";
     }
 
-    // Call the function on page load and on window resize
-    window.addEventListener("load", checkScreenSize);
-    window.addEventListener("resize", checkScreenSize);
+    /**
+     * Initialize all functionality
+     */
+    function init() {
+        initAnimations();
+        initMenuToggle();
+        initSmoothScroll();
+        // Check screen size on load and resize
+        checkScreenSize();
+        window.addEventListener("resize", checkScreenSize);
+    }
 
-    window.addEventListener('scroll', function () {
-        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
-        const scrollPosition = window.scrollY;
-        const scrollPercentage = (scrollPosition / scrollHeight) * 100;
-        progressBar.style.width = `${scrollPercentage}%`;
-    });
-})
+    // Initialize everything on DOMContentLoaded
+    init();
+});

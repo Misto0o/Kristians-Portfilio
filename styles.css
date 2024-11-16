@@ -3,10 +3,11 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Playwrite NG Modern', Arial, sans-serif;
 }
 
 body {
-    font-family: 'Playwrite NG Modern', sans-serif;
+    font-weight: 400;  /* You can specify a different weight here, such as 100 or 300 */
     background-color: #121212;
     color: #fff;
     line-height: 1.6;
@@ -240,8 +241,6 @@ header h1 {
     font-size: 1rem;
     margin-top: 10px;
 }
-
-
 
 /* Link Styling to Remove Any Unwanted Styles */
 .project-link {
