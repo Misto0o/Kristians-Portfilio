@@ -4,7 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Kristian Cook</title>
-    <link rel="stylesheet" href="about.css">
+    <!-- Preloading the stylesheet -->
+    <link rel="preload" href="about.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="about.css"></noscript>
+    
+    <!-- Other styles -->
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -15,7 +19,7 @@
     <header class="navbar" id="header">
         <div class="container">
             <div class="navbar-brand">
-                <h1 class="navbar-item">Kristian Cook</h1>
+                <h1 class="navbar-item" style="color: white;">Kristian Cook</h1>
                 <button class="navbar-burger" aria-label="Toggle Navigation">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
