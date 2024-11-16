@@ -121,6 +121,19 @@ header h1 {
     margin-top: 40px;
 }
 
+.skill-container {
+    display: inline-flex; /* Inline layout to fit around content */
+    justify-content: center;
+    align-items: center; /* Center-align items vertically */
+    gap: 15px; /* Reduced gap for compactness */
+    padding: 10px 15px; /* Smaller padding to make it more compact */
+    background-color: #161b22;
+    border-radius: 10px; /* Slightly smaller border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    max-width: fit-content; /* Adjust width to fit content */
+    margin: auto; /* Center container horizontally */
+}
+
 /* Skill Icons Section */
 .skills-icons {
     display: flex;
@@ -393,6 +406,12 @@ h2{
     .navbar a {
         font-size: 0.9rem;
         color: black;
+    }
+
+    .skill-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        gap: 10px; /* Reduce gap further for compactness */
+        padding: 10px; /* Adjust padding for smaller devices */
     }
 
 }
