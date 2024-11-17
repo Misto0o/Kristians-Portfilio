@@ -194,7 +194,32 @@ header h1 {
     border-radius: 8px;
     background-color: #1e1e1e;
     overflow: hidden;
+    position: relative; /* Ensure overlay stays within bounds */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Overlay for Hover Effect */
+.project-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 1; /* Ensure overlay is above the image */
+}
+
+/* Hover Effects */
+.project-card:hover {
+    transform: translateY(-10px); /* Slight lift on hover */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+}
+
+.project-card:hover::before {
+    opacity: 1; /* Show overlay */
 }
 
 /* Project Image */
@@ -202,12 +227,8 @@ header h1 {
     width: 100%;
     height: 200px; /* Fixed height */
     object-fit: cover;
-}
-
-/* Hover Effects */
-.project-card:hover {
-    transform: translateY(-10px); /* Slight lift on hover */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    position: relative; /* Ensure proper stacking */
+    z-index: 0; /* Keep below overlay */
 }
 
 /* Project Info */
@@ -221,9 +242,9 @@ header h1 {
     transition: opacity 0.3s ease, color 0.3s ease;
     text-align: center;
     padding: 1rem;
+    z-index: 2; /* Ensure info is above overlay */
 }
 
-/* Display Project Info on Hover */
 .project-card:hover .project-info {
     opacity: 1;
     color: #fff; /* Make text visible */
@@ -234,6 +255,7 @@ header h1 {
     font-size: 1.5rem;
     font-weight: bold;
     margin: 0;
+    color: rgba(255, 255, 255, 0.777);
 }
 
 /* Project Description */
@@ -330,7 +352,6 @@ footer {
     font-size: 1rem;
     margin-top: 50px;
 }
-
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {

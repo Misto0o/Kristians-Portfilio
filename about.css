@@ -377,11 +377,6 @@ h2{
         align-items: center;
     }
 
-    .skills-icons {
-        flex-direction: column;
-        gap: 30px;
-    }
-
     .card {
         width: 90%;
     }
@@ -408,10 +403,20 @@ h2{
         color: black;
     }
 
-    .skill-container {
-        flex-direction: column; /* Stack items vertically on smaller screens */
-        gap: 10px; /* Reduce gap further for compactness */
-        padding: 10px; /* Adjust padding for smaller devices */
-    }
+/* Skill Container with Flexbox */
+.skill-container {
+    display: flex; /* Ensure Flexbox is active */
+    flex-direction: row; /* Arrange items horizontally */
+    gap: 10px; /* Space between items */
+    padding: 8px; /* Adjust padding for smaller devices */
+    overflow-x: auto; /* Allow horizontal scrolling if items overflow */
+}
 
+/* Individual Skill Icon */
+.skill-container .skill-icon {
+    max-width: 100%; /* Ensure icons don't exceed the container's width */
+    width: 90px; /* Adjust width of icons */
+    height: auto; /* Adjust height of icons */
+    object-fit: contain; /* Ensure icons maintain their aspect ratio */
+}
 }
