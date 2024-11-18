@@ -1,93 +1,65 @@
-document.addEventListener("DOMContentLoaded", function () {
-    function initAnimations() {
-        // Animate each section with initial opacity of 0
-        gsap.utils.toArray("section").forEach((section) => {
-            gsap.from(section, {
-                scrollTrigger: {
-                    trigger: section,
-                    start: "top 80%",
-                    toggleActions: "play none none reverse",
-                },
-                opacity: 0, // Start from invisible
-                y: 20,
-                duration: 1,
-                ease: "ease-in-out",
-                onComplete: () => {
-                    gsap.to(section, { opacity: 1 }); // Set opacity to 1 after animation
-                }
-            });
-        });
-    }
+// Toggle the navigation menu
+function toggleNav() {
+    const navLinks = document.getElementById('nav-links');
+    const menuToggle = document.querySelector('.navbar-burger');
+    
+    // Toggle the 'is-active' class to open/close the menu
+    navLinks.classList.toggle('is-active');
+    menuToggle.classList.toggle('is-active');
+}
 
-    // Initialize AOS (Animate On Scroll)
-    setTimeout(() => {
-        AOS.init({
-            duration: 800,
-            easing: 'ease-in-out',
-            once: true,
-        });
-    }, 100);
-
-    function initMenuToggle() {
-        const menuToggle = document.querySelector(".navbar-burger");
-        const navLinks = document.getElementById("nav-links");
-
-        // Toggle menu on burger icon click
-        menuToggle.addEventListener("click", () => {
-            navLinks.classList.toggle("is-active"); // Toggle 'is-active' class for menu
-            menuToggle.classList.toggle("is-active"); // Toggle 'is-active' for burger icon
-        });
-
-        // Close the menu when a link is clicked
-        navLinks.addEventListener("click", () => {
-            navLinks.classList.remove("is-active");
-            menuToggle.classList.remove("is-active");
-        });
-    }
-
-    /**
-     * Smooth scroll for anchor links
-     */
-    function initSmoothScroll() {
-        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-            anchor.addEventListener("click", (e) => {
-                e.preventDefault();
-                const targetId = anchor.getAttribute("href");
-                const targetElement = document.querySelector(targetId);
-
-                if (targetElement) {
-                    targetElement.scrollIntoView({ behavior: "smooth" });
-                    // Close menu on link click (for mobile)
-                    const navLinks = document.getElementById("nav-links");
-                    navLinks.classList.remove("is-active");
-                }
-            });
-        });
-    }
-
-    /**
-     * Adjust layout based on screen size
-     */
-    function checkScreenSize() {
-        const isMobile = window.matchMedia("(max-width: 768px)").matches;
-        const navLinks = document.getElementById("nav-links");
-
-        // Adjust styles based on screen width
-        navLinks.style.flexDirection = isMobile ? "column" : "row";
-    }
-
-    /**
-     * Initialize all functionality
-     */
-    function init() {
-        initAnimations();
-        initMenuToggle();
-        initSmoothScroll();
-        // Check screen size on load and resize
-        checkScreenSize();
-        window.addEventListener("resize", checkScreenSize);
-    }
-
-    // Initialize everything on DOMContentLoaded
-    init();
+// Initialize the functionality on DOMContentLoaded
+document.addEventListener('DOMContentLoaded', () => {
+    // Ensure the burger menu is functional on load
+    const burgerButton = document.querySelector('.navbar-burger');
+    burgerButton.addEventListener('click', toggleNav);
 });
+
+AOS.init({
+    duration: 1000,
+});
+
+// Smooth scroll for links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        const targetElement = document.querySelector(this.getAttribute('href'));
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});
+
+// Function to adjust layout based on screen size
+function checkScreenSize() {
+    const isMobile = window.matchMedia("(max-width: 768px)").matches;
+    const navLinks = document.querySelector(".navbar-menu");
+
+    // Adjust layout styles based on screen width
+    navLinks.style.flexDirection = isMobile ? "column" : "row";
+}
+
+// Call the function on page load and on window resize
+window.addEventListener("load", checkScreenSize);
+window.addEventListener("resize", checkScreenSize);
+
+// Back to Top Button functionality
+const backToTopButton = document.getElementById("backToTop");
+window.addEventListener("scroll", () => {
+    backToTopButton.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
+});
+backToTopButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+});
+
+// Call animations on page load (AOS Init)
+document.addEventListener("DOMContentLoaded", () => {
+    AOS.init(); // Initialize AOS (animation on scroll)
+});
+
+if (window.innerWidth <= 768) {
+    // Disable or adjust smooth scrolling on mobile for better performance
+    document.documentElement.style.scrollBehavior = 'auto'; // Reset smooth scrolling if needed
+} else {
+    document.documentElement.style.scrollBehavior = 'smooth';
+}

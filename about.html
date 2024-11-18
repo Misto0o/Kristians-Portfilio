@@ -10,26 +10,27 @@
     
     <!-- Other styles -->
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
 </head>
 <body>
-   <!--header-->
+    <!--header-->
     <header class="navbar" id="header">
         <div class="container">
             <div class="navbar-brand">
                 <h1 class="navbar-item" style="color: white;">Kristian Cook</h1>
-                <button class="navbar-burger" aria-label="Toggle Navigation">
+                <button class="navbar-burger" aria-label="Toggle Navigation" onclick="toggleNav()">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
-                </button>
+                </button>                
             </div>
             <div id="nav-links" class="navbar-menu">
                 <div class="navbar-end">
                     <a class="navbar-item" href="index.html">Home</a>
-                    <a class="navbar-item" href="resmue.html">Resume</a>
+                    <a class="navbar-item" href="resume.html">Resume</a>
                     <a class="navbar-item" href="index.html#contact">Contact</a>
                 </div>
             </div>
@@ -39,77 +40,73 @@
     <!-- Main Container -->
     <div class="main-container">
         <!-- About Me Section -->
-        <section id="about" class="about-section" data-aos="fade-up">
+        <section id="about" class="about-section" data-aos="fade-up" data-aos-duration="1000">
             <h1 class="title is-1">About Me</h1>
             <p class="subtitle is-4">I'm Kristian Cook, a 14-year-old front-end developer with a passion for creating impactful websites. My goal is to become a senior developer, working remotely to help others and make a difference.</p>
         </section>
 
-    <div class="skill-container">
-<!-- Skills Section -->
-<section class="skills-section" data-aos="fade-up">
-    <h2>My Skills</h2>
-    <div class="skills-icons">
-        <!-- HTML -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <i class="fab fa-html5"></i>
-            <p class="skill-name hidden">HTML</p>
+        <div class="skill-container">
+            <!-- Skills Section -->
+            <section class="skills-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                <h2>My Skills</h2>
+                <div class="skills-icons">
+                    <!-- HTML -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500">
+                        <i class="lab la-html5"></i> <!-- Line Awesome HTML Icon -->
+                        <p class="skill-name hidden">HTML</p>
+                    </div>
+                    <!-- CSS -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">
+                        <i class="lab la-css3-alt"></i> <!-- Line Awesome CSS Icon -->
+                        <p class="skill-name hidden">CSS</p>
+                    </div>
+                    <!-- JavaScript -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
+                        <i class="lab la-js"></i> <!-- Line Awesome JavaScript Icon -->
+                        <p class="skill-name hidden">JavaScript</p>
+                    </div>
+                    <!-- Python -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
+                        <i class="lab la-python"></i> <!-- Line Awesome Python Icon -->
+                        <p class="skill-name hidden">Python</p>
+                    </div>
+                    <!-- PHP -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400">
+                        <i class="lab la-php"></i> <!-- Line Awesome PHP Icon -->
+                        <p class="skill-name hidden">PHP</p>
+                    </div>
+                    <!-- SQL -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
+                        <i class='bx bxl-postgresql'></i>
+                        <p class="skill-name hidden">SQL</p>
+                    </div>
+                    <!-- Java -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">
+                        <i class="lab la-java"></i> <!-- Line Awesome Java Icon -->
+                        <p class="skill-name hidden">Java</p>
+                    </div>
+                    <!-- C -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700">
+                        <!-- Custom "C" letter instead of an icon -->
+                        <span class="skill-letter">C</span>
+                        <p class="skill-name hidden">C</p>
+                    </div>
+                    <!-- jQuery -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="800">
+                        <i class='bx bxl-jquery' ></i>
+                        <p class="skill-name hidden">jQuery</p>
+                    </div>
+                    <!-- Git -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="900">
+                        <i class="lab la-git"></i> <!-- Line Awesome Git Icon -->
+                        <p class="skill-name hidden">Git</p>
+                    </div>
+                </div>
+            </section>
         </div>
-        <!-- CSS -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <i class="fab fa-css3-alt"></i>
-            <p class="skill-name hidden">CSS</p>
-        </div>
-        <!-- JavaScript -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <i class="fab fa-js"></i>
-            <p class="skill-name hidden">JavaScript</p>
-        </div>
-        <!-- Python -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <i class="fab fa-sass"></i>
-            <p class="skill-name hidden">SASS</p>
-        </div>
-        <!-- Python -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <i class="fab fa-python"></i>
-            <p class="skill-name hidden">Python</p>
-        </div>
-        <!-- PHP -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <i class="fab fa-php"></i>
-            <p class="skill-name hidden">PHP</p>
-        </div>
-        <!-- SQL -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <img src="SVG-Images/sql.svg" alt="SQL Logo" class="skill-icon">
-            <p class="skill-name hidden">SQL</p>
-        </div>
-        <!-- Java -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <i class="fab fa-java"></i>
-            <p class="skill-name hidden">Java</p>
-        </div>
-        <!-- C -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <i class="fa-solid fa-c"></i>
-            <p class="skill-name hidden">C</p>
-        </div>
-        <!-- jQuery -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <img src="SVG-Images/jquery.svg" alt="jquery logo" class="skill-icon">
-            <p class="skill-name hidden">jQuery</p>
-        </div>
-        <!-- Git -->
-        <div class="skill" onclick="toggleSkillInfo(this)">
-            <i class="fab fa-git-alt"></i>
-            <p class="skill-name hidden">Git</p>
-        </div>
-    </div>
-</section>
-</div>
 
         <!-- Interests Section -->
-        <section class="portfolio-section" data-aos="fade-up">
+        <section class="portfolio-section" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="title is-3">My Interests</h2>
             <ul>
                 <li>Robotics</li>
@@ -119,44 +116,47 @@
         </section>
 
         <!-- Testimonials Section -->
-        <section class="testimonials-section" data-aos="fade-up">
+        <section class="testimonials-section" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="title is-3">Testimonials</h2>
             <blockquote>"Your work on the KearnsRobotics website was impressive!" - A Peer</blockquote>
             <blockquote>"Amazing creativity and problem-solving skills." - A Mentor</blockquote>
         </section>
     </div>
 
-<!-- Certifications Section -->
-<section id="certifications" class="certifications-section" data-aos="fade-up">
-    <h2>My Certifications</h2>
-    <div class="certifications-container">
-        <!-- Certification 1 -->
-        <div class="certification-card">
-            <img src="images/CS50x.png" alt="Certification 1" class="certification-image">
-            <h3>Harvard CS50</h3>
-            <p>Issued by EDX</p>
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>My Certifications</h2>
+        <div class="certifications-container">
+            <!-- Certification 1 -->
+            <div class="certification-card" data-aos="flip-left" data-aos-duration="1000">
+                <img src="images/CS50x.png" alt="Certification 1" class="certification-image">
+                <h3>Harvard CS50</h3>
+                <p>Issued by EDX</p>
+            </div>
+            <!-- Certification 2 -->
+            <div class="certification-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
+                <img src="images/Screenshot 2024-11-09 at 16-40-52 Profile freeCodeCamp.org.png" alt="Certification 2" class="certification-image">
+                <h3>Front End Development Libraries</h3>
+                <p>Issued by freeCodeCamp</p>
+            </div>
+            <!-- Certification 3 -->
+            <div class="certification-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                <img src="images/certification3.jpg" alt="Certification 3" class="certification-image">
+                <h3>Certification Name</h3>
+                <p>Issued by DEF Organization</p>
+            </div>
         </div>
-        <!-- Certification 2 -->
-        <div class="certification-card">
-            <img src="images/Screenshot 2024-11-09 at 16-40-52 Profile freeCodeCamp.org.png" alt="Certification 2" class="certification-image">
-            <h3>Front End Devlopment Libraries</h3>
-            <p>Issued by freeCodeCamp</p>
-        </div>
-        <!-- Certification 3 -->
-        <div class="certification-card">
-            <img src="images/certification3.jpg" alt="Certification 3" class="certification-image">
-            <h3>Certification Name</h3>
-            <p>Issued by DEF Organization</p>
-        </div>
-    </div>
-</section>
+    </section>
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" data-aos="fade-up" data-aos-duration="1500">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
     <footer>
         <p>© 2024 Kristian Cook</p>
     </footer>
+
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <script src="about.js"></script>
 </body>
 </html>
