@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <!-- Meta Information -->
     <meta charset="UTF-8">
@@ -18,10 +17,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
 </head>
-
 <body>
     <!-- Header -->
-    <header class="navbar" id="header">
+    <header class="navbar" id="header" data-aos="fade-up" data-aos-duration="350">
         <div class="container">
             <div class="navbar-brand">
                 <h1 class="navbar-item">Kristian Cook</h1>
@@ -44,15 +42,15 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="landing" class="hero is-fullheight" data-aos="fade-up">
+    <section id="landing" class="hero is-fullheight" data-aos="fade-up" data-aos-duration="1200">
         <div class="container">
             <!-- Profile Photo -->
-            <div class="image-frame">
+            <div class="image-frame" data-aos="zoom-in" data-aos-duration="1000">
                 <img src="images/Kristian Cook Pic.jpg" alt="Kristian Cook's Photo">
             </div>
 
             <!-- Contact Info with Icons -->
-            <div class="contact-info">
+            <div class="contact-info" data-aos="fade-up" data-aos-duration="1000">
                 <a href="https://github.com/Misto0o" target="_blank" title="GitHub">
                     <i class="fab fa-github"></i>
                 </a>
@@ -65,14 +63,14 @@
             </div>
 
             <!-- Text Content -->
-            <h1 class="title is-1">Hello, I'm <span class="highlight">Kristian Cook</span></h1>
-            <p class="subtitle">Creative Front-End Developer</p>
-            <a href="#projects" class="button is-primary">View Projects</a>
+            <h1 class="title is-1" data-aos="fade-up" data-aos-duration="1000">Hello, I'm <span class="highlight">Kristian Cook</span></h1>
+            <p class="subtitle" data-aos="fade-up" data-aos-duration="1200">Creative Front-End Developer</p>
+            <a href="#projects" class="button is-primary" data-aos="fade-up" data-aos-duration="1400">View Projects</a>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section class="section" id="projects">
+    <section class="section" id="projects" data-aos="fade-up" data-aos-duration="1500">
         <div class="container">
             <h2 class="title has-text-centered">Projects</h2>
             <p class="subtitle has-text-centered">Check out some of my recent work!</p>
@@ -80,7 +78,7 @@
             <!-- Projects Container -->
             <div class="project-container">
                 <!-- Project Card 1 -->
-                <div class="project-card">
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1000">
                     <a href="https://kearnsrobotics.netlify.app" target="_blank" class="project-link">
                         <div class="card-image">
                             <figure class="image is-4by3">
@@ -97,7 +95,7 @@
                 </div>
 
                 <!-- Project Card 2 -->
-                <div class="project-card">
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1200">
                     <a href="https://justcodebruh.netlify.app" target="_blank" class="project-link">
                         <div class="card-image">
                             <figure class="image is-4by3">
@@ -114,7 +112,7 @@
                 </div>
 
                 <!-- Project Card 3 -->
-                <div class="project-card">
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1400">
                     <a href="https://mangaanimesearch.netlify.app/" target="_blank" class="project-link">
                         <div class="card-image">
                             <figure class="image is-4by3">
@@ -131,7 +129,7 @@
                 </div>
 
                 <!-- Project Card 4 -->
-                <div class="project-card">
+                <div class="project-card" data-aos="flip-left" data-aos-duration="1600">
                     <a href="https://mistcssplayground.netlify.app/" target="_blank" class="project-link">
                         <div class="card-image">
                             <figure class="image is-4by3">
@@ -151,7 +149,7 @@
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="section" data-aos="fade-up">
+    <section id="contact" class="section" data-aos="fade-up" data-aos-duration="1500">
         <div class="container">
             <h2 class="title has-text-centered">Contact</h2>
             <p class="subtitle has-text-centered">Feel free to reach out to me!</p>
@@ -160,7 +158,7 @@
                     <a href="https://github.com/Misto0o" target="_blank" class="button is-link is-fullwidth">
                         <i class="fab fa-github"></i> GitHub
                     </a>
-                    <form id="contact-form">
+                    <form id="contact-form" data-aos="fade-up" data-aos-duration="1600">
                         <input type="text" id="name" placeholder="Your Name" required class="input is-medium">
                         <input type="email" id="email" placeholder="Your Email" required class="input is-medium">
                         <textarea id="message" placeholder="Your Message" required class="textarea is-medium"></textarea>
@@ -173,33 +171,29 @@
     </section>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top">
+    <button id="backToTop" class="back-to-top" data-aos="fade-up" data-aos-duration="1500">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1600">
         <div class="content has-text-centered">
-            <p>&copy; 2024 Kristian Cook | All Rights Reserved</p>
+            <p>&copy; 2024 Kristian Cook | Front-End Developer</p>
         </div>
     </footer>
 
-    <!-- Scripts -->
+    <!-- JavaScript -->
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>
-        AOS.init();
-        function toggleNav() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('is-active');
-        }
-        const backToTopButton = document.getElementById("backToTop");
-        window.addEventListener("scroll", () => {
-            backToTopButton.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
-        });
-        backToTopButton.addEventListener("click", () => {
-            window.scrollTo({ top: 0, behavior: "smooth" });
-        });
+        AOS.init(); // Initialize AOS
+        window.addEventListener('load', function () {
+    AOS.init(); // Initialize AOS on load
+    AOS.refresh(); // Refresh AOS to apply animations correctly
+    });
+
     </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
