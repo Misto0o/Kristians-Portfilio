@@ -8,13 +8,6 @@ function toggleNav() {
     menuToggle.classList.toggle('is-active');
 }
 
-// Initialize the functionality on DOMContentLoaded
-document.addEventListener('DOMContentLoaded', () => {
-    // Ensure the burger menu is functional on load
-    const burgerButton = document.querySelector('.navbar-burger');
-    burgerButton.addEventListener('click', toggleNav);
-});
-
 AOS.init({
     duration: 1000,
 });
