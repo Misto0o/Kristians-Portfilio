@@ -199,16 +199,6 @@ header h1 {
     transform: translateY(-20px);
 }
 
-.skill-letter {
-    font-size: 2rem;
-    color: #fff; /* White color for icons */
-    font-weight: bold;
-    text-align: center;
-    display: block;
-    position: relative;
-    top: 5px;  /* Adjust the value as needed to move it down */
-}
-
 /* Cards for skills, tools, etc. */
 .card {
     background-color: #161b22;
