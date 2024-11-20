@@ -71,6 +71,14 @@ header h1 {
     transform-origin: bottom left;
 }
 
+.navbar-item:hover {
+    color: #2a9d8f !important;
+}
+
+.navbar-item {
+    color: white !important;
+}
+
 /* About Section */
 .about-section {
     padding: 80px 20px;
