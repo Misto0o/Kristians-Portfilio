@@ -432,7 +432,7 @@ h2{
 
     .navbar a {
         font-size: 0.9rem;
-        color: black;
+        color: black !important;
     }
 
 /* Skill Container with Flexbox */
@@ -450,15 +450,5 @@ h2{
     width: 90px; /* Adjust width of icons */
     height: auto; /* Adjust height of icons */
     object-fit: contain; /* Ensure icons maintain their aspect ratio */
-}
-
-.skill-letter {
-    font-size: 2rem;
-    color: #fff; /* White color for icons */
-    font-weight: bold;
-    text-align: center;
-    display: block;
-    position: relative;
-    top: 5px;  /* Adjust the value as needed to move it down */
 }
 }
