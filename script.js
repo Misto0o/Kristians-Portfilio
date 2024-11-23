@@ -54,3 +54,26 @@ if (window.innerWidth <= 768) {
 } else {
     document.documentElement.style.scrollBehavior = 'smooth';
 }
+
+emailjs.init('k-OW5Z5AEgecgKPBy'); // Replace with your actual EmailJS user ID
+
+const btn = document.getElementById('button');
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();  // Prevents the form from submitting traditionally
+
+  btn.value = 'Sending...';  // Change button text to indicate sending
+
+  const serviceID = 'service_g2d5g4e';  // Replace with your EmailJS service ID
+  const templateID = 'template_5o8v3ko';  // Replace with your EmailJS template ID
+
+  emailjs.sendForm(serviceID, templateID, this)  // Send the form data to EmailJS
+    .then(() => {
+      btn.value = 'Send Email';  // Reset button text on success
+      alert('Sent!');  // Alert on success
+      document.getElementById('contact-form').reset();
+    }, (err) => {
+      btn.value = 'Send Email';  // Reset button text on error
+      console.error('Error details:', err);  // Log error details for debugging
+      alert('Something went wrong. Please try again later.');
+    });
+});

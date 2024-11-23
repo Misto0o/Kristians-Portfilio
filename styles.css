@@ -279,6 +279,10 @@ header h1 {
     object-fit: cover; /* Ensures the image fully fills the container */
 }
 
+#contact-form .field label {
+    color: white;
+}
+
 
 /* Keyframes for Fade-in Animation */
 @keyframes fadeIn {

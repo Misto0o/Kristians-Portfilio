@@ -157,27 +157,42 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section" data-aos="fade-up" data-aos-duration="1500">
-        <div class="container">
-            <h2 class="title has-text-centered">Contact</h2>
-            <p class="subtitle has-text-centered">Feel free to reach out to me!</p>
-            <div class="columns is-centered">
-                <div class="column is-half">
-                    <a href="https://github.com/Misto0o" target="_blank" class="button is-link is-fullwidth">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <form id="contact-form" data-aos="fade-up" data-aos-duration="1600">
-                        <input type="text" id="name" placeholder="Your Name" required class="input is-medium">
-                        <input type="email" id="email" placeholder="Your Email" required class="input is-medium">
-                        <textarea id="message" placeholder="Your Message" required class="textarea is-medium"></textarea>
-                        <button type="submit" class="button is-primary is-fullwidth">Send Message</button>
-                    </form>
-                    <p class="has-text-centered">Email: <a href="mailto:misttwist@icloud.com">misttwist@icloud.com</a></p>
-                </div>
+<!-- Contact Section -->
+<section id="contact" class="section" data-aos="fade-up" data-aos-duration="1500">
+    <div class="container">
+        <h2 class="title has-text-centered">Contact</h2>
+        <p class="subtitle has-text-centered">Feel free to reach out to me!</p>
+        <div class="columns is-centered">
+            <div class="column is-half">
+                <a href="https://github.com/Misto0o" target="_blank" class="button is-link is-fullwidth">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <form id="contact-form" data-aos="fade-up" data-aos-duration="1600">
+                    <!-- User Name -->
+                    <div class="field">
+                        <label for="name" class="label">Your Name</label>
+                        <input type="text" id="name" name="user_name" placeholder="Your Name" required class="input is-medium">
+                    </div>
+                    <!-- Email -->
+                    <div class="field">
+                        <label for="email" class="label">Your Email</label>
+                        <input type="email" id="email" name="user_email" placeholder="Your Email" required class="input is-medium">
+                    </div>
+                    <!-- Message -->
+                    <div class="field">
+                        <label for="message" class="label">Your Message</label>
+                        <textarea id="message" name="message" placeholder="Your Message" required class="textarea is-medium"></textarea>
+                    </div>
+                    <!-- Submit Button -->
+                    <div class="field">
+                        <button type="submit" id="button" class="button is-primary is-fullwidth">Send Email</button>
+                    </div>
+                </form>
+                <p class="has-text-centered">Email: <a href="mailto:misttwist@icloud.com">misttwist@icloud.com</a></p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" data-aos="fade-up" data-aos-duration="1500">
@@ -201,6 +216,10 @@
     AOS.refresh(); // Refresh AOS to apply animations correctly
     });
     </script>
-    <script src="script.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script type="text/javascript">
+  emailjs.init('k-OW5Z5AEgecgKPBy')
+</script>
+<script src="script.js"></script>
 </body>
 </html>
