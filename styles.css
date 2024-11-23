@@ -1,34 +1,41 @@
 /* General Reset and Body Styling */
 * {
-    scroll-behavior: smooth;
     box-sizing: border-box;
     font-family: 'Playwrite NG Modern', Arial, sans-serif;
-
+    scroll-behavior: scroll;
 }
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.example::-webkit-scrollbar {
+    display: none;
+  }
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .example {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
 
 body, html {
-    overflow: hidden;  /* Prevents double scrollbars */
+    overflow-x: visible; /* Ensure only one scrollbar */
+overflow-y: auto;
 }
 
+/* Global Styles */
 body {
-    font-weight: 400;  /* You can specify a different weight here, such as 100 or 300 */
-    background-color: #121212;
-    color: #fff;
+    background-color: #0d1117; /* Dark background */
+    color: #c9d1d9;
     line-height: 1.6;
-    overflow-x: hidden;
+    text-align: center;
 }
 
-/* Header Styling */
-header {
-    padding: 20px 0;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+/* Header and Navigation */
+header.navbar {
     display: flex;
-    justify-content: center;
-    z-index: 1000;
+    background-color: #161b22;
+    padding: 15px 0;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    gap: 2rem;
+    align-items: center;
 }
 
 header h1 {
@@ -40,13 +47,8 @@ header h1 {
     font-weight: bold;
 }
 
-.navbar {
-    display: flex;
-    gap: 2rem;
-}
-
 .navbar a {
-    color: black;
+    color: white;
     font-size: 1rem;
     font-weight: bold;
     text-decoration: none;
@@ -76,12 +78,12 @@ header h1 {
     transform-origin: bottom left;
 }
 
-.navbar a:hover {
-    color: #2a9d8f;
+.navbar-item:hover {
+    color: #2a9d8f !important;
 }
 
-.navbar a:hover, .navbar-item:hover {
-    color: #2a9d8f;
+.navbar-item {
+    color: white !important;
 }
 
 /* Hero Section */
@@ -400,6 +402,7 @@ footer {
 
     .navbar a {
         font-size: 0.9rem;
+        color: black !important;
     }
 
     .section h2 {
