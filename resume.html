@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kristian Cook - Resume</title>
+    <!-- Fonts and CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
+    <link rel="preload" href="resume.css" as="style" onload="this.rel='stylesheet'">
+    <!-- Frameworks and Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+    <link rel="icon" href="PortfilioFaviocn/favicon-32x32.png" type="image/x-icon">
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Kristian's Portfolio">
+    <meta property="og:description" content="Front-End Web Developer">
+    <meta property="og:image" content="PortfilioFaviocn/favicon-32x32.png">
+    <meta property="og:url" content="https://kristiansportfilio.netlify.app">
+    <meta property="og:type" content="website">
+</head>
+<body>
+    <!-- Header -->
+    <header class="navbar" id="header" data-aos="fade-in" data-aos-duration="450">
+        <div class="container">
+            <div class="navbar-brand">
+                <h1 class="navbar-item">Kristian Cook</h1>
+                <button class="navbar-burger" aria-label="Toggle Navigation" onclick="toggleNav()">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </button>
+            </div>
+            <div id="nav-links" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="about.html">About</a>
+                    <a class="navbar-item" href="#projects">Projects</a>
+                    <a class="navbar-item" href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container content">
+        <h1 class="title">Resume</h1>
+        <p class="subtitle">Welcome to my resume page! You can view my resume directly below or download it as a Word document.</p>
+
+        <!-- Download Section -->
+        <section class="resume-link box" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="title is-4">Download My Resume</h2>
+            <p>
+                <a href="Assets/Kristian-Michael-Cook-Resume.docx" download class="button is-primary is-rounded">
+                    <i class="fas fa-download"></i> Download Resume (Word)
+                </a>
+            </p>
+        </section>
+
+        <!-- Google Docs Embed -->
+        <section class="google-docs-embed" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="title is-4">View My Resume</h2>
+            <iframe 
+                src="https://docs.google.com/document/d/e/2PACX-1vQBh6p7GAm4FpJxTlsDM3T6cLgsQaBxOlkv_5YU9--jSkvJfbvJPA9oZ7kNpbp5gA/pub?embedded=true" 
+                allowfullscreen>
+            </iframe>
+        </section>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" data-aos="fade-up" data-aos-duration="1500">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <!-- Footer -->
+    <footer class="footer" data-aos="fade-up" data-aos-duration="1600">
+        <div class="content has-text-centered">
+            <p>&copy; 2024 Kristian Cook | Front-End Developer</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+        window.addEventListener('load', function () {
+            AOS.refresh();
+        });
+    </script>
+    <script src="resume.js"></script>
+</body>
+</html>

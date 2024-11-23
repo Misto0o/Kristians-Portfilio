@@ -2,22 +2,6 @@
 * {
     box-sizing: border-box;
     font-family: 'Playwrite NG Modern', Arial, sans-serif;
-    scroll-behavior: scroll;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.example::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .example {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
-  }
-
-body, html {
-    overflow-x: visible; /* Ensure only one scrollbar */
-overflow-y: auto;
 }
 
 /* Global Styles */
