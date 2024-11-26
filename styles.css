@@ -70,6 +70,10 @@ header h1 {
     color: white !important;
 }
 
+.navbar-burger{
+    color: white !important;
+}
+
 /* Hero Section */
 #landing {
     height: 100vh;

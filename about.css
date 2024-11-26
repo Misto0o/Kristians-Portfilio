@@ -79,6 +79,10 @@ header h1 {
     color: white !important;
 }
 
+.navbar-burger{
+    color: white !important;
+}
+
 /* About Section */
 .about-section {
     padding: 80px 20px;

@@ -70,6 +70,10 @@ header h1 {
     color: white !important;
 }
 
+.navbar-burger{
+    color: white !important;
+}
+
 /* Resume Section */
 .resume-link, .google-docs-embed {
     margin: 20px auto;
