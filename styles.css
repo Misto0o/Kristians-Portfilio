@@ -12,6 +12,14 @@ body {
     text-align: center;
 }
 
+h1, h2, h3, h4{
+    color: white !important;
+}
+
+label{
+    color: white !important;
+}
+
 /* Header and Navigation */
 header.navbar {
     display: flex;
@@ -170,117 +178,93 @@ header h1 {
     color: white;
 }
 
-/* Project Container with CSS Grid */
-.project-container {
-    max-width: 1000px; /* Adjust container width */
-    margin: 0 auto; /* Center container */
-    padding: 2rem 1rem; /* Compact padding */
-    display: grid; /* Use CSS Grid */
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive columns */
-    gap: 2rem; /* Space between cards */
+/* Carousel Container */
+.carousel-container {
+    position: relative;
+    max-width: 1200px; /* Increase the max width */
+    margin: 0 auto;
+    padding: 3rem 2rem; /* More padding for better spacing */
+    overflow: hidden; /* Hide overflow to make the carousel cleaner */
 }
 
-/* Project Cards */
-.project-card {
+/* Carousel */
+.carousel {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 2rem; /* Increased gap for better spacing */
+    scroll-behavior: smooth;
+    padding-bottom: 1rem; /* Padding to ensure smooth scrolling */
+}
+
+/* Carousel Items */
+.carousel-item {
+    min-width: 350px; /* Increased width of each card */
+    scroll-snap-align: start;
+    transition: transform 0.3s ease;
+    flex-shrink: 0; /* Prevent items from shrinking */
+}
+
+/* Project Card Styling */
+.carousel-item .project-card {
     display: flex;
     flex-direction: column;
-    border-radius: 6px; /* Slightly smaller border radius */
+    border-radius: 8px; /* Slightly larger border radius */
     background-color: #1e1e1e;
     overflow: hidden;
-    position: relative; /* Ensure overlay stays within bounds */
+    position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /* Add shadow to all cards */
 }
 
-/* Overlay for Hover Effect */
-.project-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 1; /* Ensure overlay is above the image */
+/* Hover Effects for Project Cards */
+.carousel-item:hover .project-card {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
 }
 
-/* Hover Effects */
-.project-card:hover {
-    transform: translateY(-5px); /* Slight hover lift */
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /* Slightly reduced shadow */
-}
-
-.project-card:hover::before {
-    opacity: 1; /* Show overlay */
-}
-
-/* Project Image */
+/* Project Image Styling */
 .project-image {
     width: 100%;
-    height: 180px; /* Fixed height */
+    height: 250px; /* Increased height for images */
     object-fit: cover;
-    position: relative; /* Ensure proper stacking */
-    z-index: 0; /* Keep below overlay */
 }
 
-/* Project Info */
+/* Project Info Styling */
 .project-info {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%); /* Center the text */
+    transform: translate(-50%, -50%);
     color: transparent;
     opacity: 0;
     transition: opacity 0.3s ease, color 0.3s ease;
     text-align: center;
-    padding: 0.5rem; /* Slightly smaller padding */
-    z-index: 2; /* Ensure info is above overlay */
 }
 
-.project-card:hover .project-info {
+.carousel-item:hover .project-info {
     opacity: 1;
-    color: #fff; /* Make text visible */
+    color: #fff;
 }
 
-/* Project Title */
-.project-info h3 {
-    font-size: 1.25rem; /* Slightly smaller title font size */
-    font-weight: bold;
-    margin: 0;
-    color: rgba(255, 255, 255, 0.8);
-}
-
-/* Project Description */
-.project-info p {
-    font-size: 0.9rem; /* Smaller font size for description */
-    margin-top: 8px;
-}
-
-/* Link Styling to Remove Any Unwanted Styles */
-.project-link {
-    display: block;
-    color: inherit;
+/* GitHub Link Styling */
+.github-link {
+    display: inline-block;
+    margin-top: 15px; /* Increased space between info and link */
+    font-size: 1.2rem; /* Larger font size */
+    color: #fff;
     text-decoration: none;
+    background-color: #333;
+    padding: 8px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.project-link:focus, .project-link:hover {
-    text-decoration: none;
+.github-link:hover {
+    background-color: #6e5494;
 }
 
-/* Card Image Container Ensuring Full Height */
-.card-image {
-    position: relative;
-    height: 100%;
-    width: 100%;
-}
 
-/* Remove Potential Gaps in Image */
-.card-image .image {
-    height: 100%;
-    width: 100%;
-    object-fit: cover; /* Ensures the image fully fills the container */
-}
 
 /* Keyframes for Fade-in Animation */
 @keyframes fadeIn {
@@ -406,28 +390,32 @@ footer {
 }
 
 @media (max-width: 768px) {
-    .project-container {
-        display: grid;
-        grid-template-columns: 1fr; /* Stack cards in one column */
-        gap: 30px; /* Increased spacing between cards */
-        padding: 15px; /* Add padding around the container */
+    /* Project Container */
+    .carousel-container {
+        padding: 15px; /* Padding for better spacing */
     }
 
-    .project-card {
-        width: 100%; /* Full width of the container */
-        max-width: 400px; /* Limit maximum card size */
-        margin: 0 auto; /* Center the card horizontally */
-        height: auto; /* Allow height to adjust automatically */
-        padding: 15px; /* Increased padding for better spacing */
+    .carousel {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        gap: 15px; /* Adjust the gap between items */
+    }
+
+    /* Carousel Item (Project Card) */
+    .carousel-item {
+        flex: 0 1 100%; /* Makes each card full width on mobile */
+        max-width: 100%; /* Ensure cards don't exceed the screen width */
+        padding: 15px; /* Add padding around each card */
     }
 
     .project-info h3 {
-        font-size: 1rem !important; /* Adjusted font size for titles */
-        line-height: 1.2 !important; /* Slightly larger line height */
+        font-size: 1.1rem !important; /* Adjust title size */
+        line-height: 1.3 !important; /* Adjust line height */
     }
 
     .project-info p {
-        font-size: 0.9rem !important; /* Adjusted font size for descriptions */
-        line-height: 1.3 !important; /* Maintain spacing between lines */
+        font-size: 0.9rem !important; /* Adjust description size */
+        line-height: 1.4 !important; /* Spacing between lines */
     }
 }
