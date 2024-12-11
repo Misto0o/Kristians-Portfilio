@@ -333,22 +333,26 @@ footer {
     letter-spacing: 1.2px;
 }
 
+/* Container for certifications */
 .certifications-container {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
-    flex-wrap: wrap;
+    padding: 0 10px;
 }
 
+/* Individual certification card */
 .certification-card {
     background-color: #161b22;
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
     padding: 20px;
-    width: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 20px;
+    margin: 0; /* No margin needed; grid layout handles spacing */
 }
 
 .certification-card:hover {
@@ -357,7 +361,7 @@ footer {
 }
 
 .certification-card img {
-    width: 100%;
+    width: 89%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
