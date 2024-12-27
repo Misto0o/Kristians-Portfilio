@@ -6,17 +6,21 @@
 
 /* Global Styles */
 body {
-    background-color: #0d1117; /* Dark background */
+    background-color: #0d1117;
+    /* Dark background */
     color: #c9d1d9;
     line-height: 1.6;
     text-align: center;
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
     color: white !important;
 }
 
-label{
+label {
     color: white !important;
 }
 
@@ -78,7 +82,7 @@ header h1 {
     color: white !important;
 }
 
-.navbar-burger{
+.navbar-burger {
     color: white !important;
 }
 
@@ -181,10 +185,13 @@ header h1 {
 /* Carousel Container */
 .carousel-container {
     position: relative;
-    max-width: 1200px; /* Increase the max width */
+    max-width: 1200px;
+    /* Increase the max width */
     margin: 0 auto;
-    padding: 3rem 2rem; /* More padding for better spacing */
-    overflow: hidden; /* Hide overflow to make the carousel cleaner */
+    padding: 3rem 2rem;
+    /* More padding for better spacing */
+    overflow: hidden;
+    /* Hide overflow to make the carousel cleaner */
 }
 
 /* Carousel */
@@ -192,41 +199,49 @@ header h1 {
     display: flex;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
-    gap: 2rem; /* Increased gap for better spacing */
+    gap: 2rem;
+    /* Increased gap for better spacing */
     scroll-behavior: smooth;
-    padding-bottom: 1rem; /* Padding to ensure smooth scrolling */
+    padding-bottom: 1rem;
+    /* Padding to ensure smooth scrolling */
 }
 
 /* Carousel Items */
 .carousel-item {
-    min-width: 350px; /* Increased width of each card */
+    min-width: 350px;
+    /* Increased width of each card */
     scroll-snap-align: start;
     transition: transform 0.3s ease;
-    flex-shrink: 0; /* Prevent items from shrinking */
+    flex-shrink: 0;
+    /* Prevent items from shrinking */
 }
 
 /* Project Card Styling */
 .carousel-item .project-card {
     display: flex;
     flex-direction: column;
-    border-radius: 8px; /* Slightly larger border radius */
+    border-radius: 8px;
+    /* Slightly larger border radius */
     background-color: #1e1e1e;
     overflow: hidden;
     position: relative;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2); /* Add shadow to all cards */
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+    /* Add shadow to all cards */
 }
 
 /* Hover Effects for Project Cards */
 .carousel-item:hover .project-card {
     transform: translateY(-5px);
-    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3); /* Larger shadow on hover */
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.3);
+    /* Larger shadow on hover */
 }
 
 /* Project Image Styling */
 .project-image {
     width: 100%;
-    height: 250px; /* Increased height for images */
+    height: 250px;
+    /* Increased height for images */
     object-fit: cover;
 }
 
@@ -250,8 +265,10 @@ header h1 {
 /* GitHub Link Styling */
 .github-link {
     display: inline-block;
-    margin-top: 15px; /* Increased space between info and link */
-    font-size: 1.2rem; /* Larger font size */
+    margin-top: 15px;
+    /* Increased space between info and link */
+    font-size: 1.2rem;
+    /* Larger font size */
     color: #fff;
     text-decoration: none;
     background-color: #333;
@@ -268,8 +285,13 @@ header h1 {
 
 /* Keyframes for Fade-in Animation */
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
 }
 
 /* Section Styling */
@@ -333,27 +355,17 @@ header h1 {
     z-index: 1000;
     font-size: 20px;
     cursor: pointer;
-  }
+}
 
-  .back-to-top i {
+.back-to-top i {
     margin: 0;
-  }
-
-/* Footer Styling */
-footer {
-    background-color: #121212;
-    color: black;
-    text-align: center;
-    padding: 20px;
-    font-size: 1rem;
-    margin-top: 50px;
 }
 
 /* Media Queries for Mobile */
 @media (max-width: 768px) {
     #landing {
-        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 140, 255, 0.7)), 
-        url('images/backgroundPortfilio.jpg') cover no-repeat;
+        background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 140, 255, 0.7)),
+            url('images/backgroundPortfilio.jpg') cover no-repeat;
         background-size: auto;
     }
 
@@ -390,32 +402,42 @@ footer {
 }
 
 @media (max-width: 768px) {
+
     /* Project Container */
     .carousel-container {
-        padding: 15px; /* Padding for better spacing */
+        padding: 15px;
+        /* Padding for better spacing */
     }
 
     .carousel {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
-        gap: 15px; /* Adjust the gap between items */
+        gap: 15px;
+        /* Adjust the gap between items */
     }
 
     /* Carousel Item (Project Card) */
     .carousel-item {
-        flex: 0 1 100%; /* Makes each card full width on mobile */
-        max-width: 100%; /* Ensure cards don't exceed the screen width */
-        padding: 15px; /* Add padding around each card */
+        flex: 0 1 100%;
+        /* Makes each card full width on mobile */
+        max-width: 100%;
+        /* Ensure cards don't exceed the screen width */
+        padding: 15px;
+        /* Add padding around each card */
     }
 
     .project-info h3 {
-        font-size: 1.1rem !important; /* Adjust title size */
-        line-height: 1.3 !important; /* Adjust line height */
+        font-size: 1.1rem !important;
+        /* Adjust title size */
+        line-height: 1.3 !important;
+        /* Adjust line height */
     }
 
     .project-info p {
-        font-size: 0.9rem !important; /* Adjust description size */
-        line-height: 1.4 !important; /* Spacing between lines */
+        font-size: 0.9rem !important;
+        /* Adjust description size */
+        line-height: 1.4 !important;
+        /* Spacing between lines */
     }
 }

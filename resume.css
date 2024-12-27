@@ -6,7 +6,8 @@
 
 /* Global Styles */
 body {
-    background-color: #0d1117; /* Dark background */
+    background-color: #0d1117;
+    /* Dark background */
     color: #c9d1d9;
     line-height: 1.6;
     text-align: center;
@@ -70,12 +71,13 @@ header h1 {
     color: white !important;
 }
 
-.navbar-burger{
+.navbar-burger {
     color: white !important;
 }
 
 /* Resume Section */
-.resume-link, .google-docs-embed {
+.resume-link,
+.google-docs-embed {
     margin: 20px auto;
     padding: 20px;
     background-color: black !important;
@@ -136,17 +138,23 @@ footer {
 
 /* Styling for the Resume Page */
 .title {
-    color: #ffffff !important; /* Makes the text white */
-    font-size: 2rem; /* Adjust size if needed */
+    color: #ffffff !important;
+    /* Makes the text white */
+    font-size: 2rem;
+    /* Adjust size if needed */
     margin-bottom: 10px;
 }
 
 .subtitle {
-    color: #ffffff !important; /* Makes the text white */
-    font-size: 1.2rem; /* Adjust size if needed */
+    color: #ffffff !important;
+    /* Makes the text white */
+    font-size: 1.2rem;
+    /* Adjust size if needed */
     margin-bottom: 20px;
-    line-height: 1.6; /* Improve readability */
+    line-height: 1.6;
+    /* Improve readability */
 }
+
 /* Mobile Devices (Max Width: 768px) */
 @media (max-width: 768px) {
     .navbar {

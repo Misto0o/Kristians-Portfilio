@@ -6,8 +6,10 @@
 
 }
 
-body, html {
-    overflow: hidden;  /* Prevents double scrollbars */
+body,
+html {
+    overflow: hidden;
+    /* Prevents double scrollbars */
 }
 
 /* Global Styles */
@@ -15,7 +17,8 @@ body {
     font-family: 'Playwrite NG Modern';
     margin: 0;
     padding: 0;
-    background-color: #0d1117; /* Dark background */
+    background-color: #0d1117;
+    /* Dark background */
     color: #c9d1d9;
     line-height: 1.6;
     text-align: center;
@@ -79,7 +82,7 @@ header h1 {
     color: white !important;
 }
 
-.navbar-burger{
+.navbar-burger {
     color: white !important;
 }
 
@@ -139,16 +142,24 @@ header h1 {
 
 /* Skill Container */
 .skill-container {
-    display: inline-flex; /* Inline layout to fit around content */
+    display: inline-flex;
+    /* Inline layout to fit around content */
     justify-content: center;
-    align-items: center; /* Center-align items vertically */
-    gap: 15px; /* Reduced gap for compactness */
-    padding: 10px 15px; /* Smaller padding to make it more compact */
+    align-items: center;
+    /* Center-align items vertically */
+    gap: 15px;
+    /* Reduced gap for compactness */
+    padding: 10px 15px;
+    /* Smaller padding to make it more compact */
     background-color: #161b22;
-    border-radius: 10px; /* Slightly smaller border radius */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
-    max-width: fit-content; /* Adjust width to fit content */
-    margin: auto; /* Center container horizontally */
+    border-radius: 10px;
+    /* Slightly smaller border radius */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    /* Subtle shadow for depth */
+    max-width: fit-content;
+    /* Adjust width to fit content */
+    margin: auto;
+    /* Center container horizontally */
 }
 
 /* Skill Icons Section */
@@ -167,9 +178,11 @@ header h1 {
 }
 
 /* Skill Icons and Skill Names */
-.skill i, .skill-icon {
+.skill i,
+.skill-icon {
     font-size: 3.5rem;
-        color: #fff; /* White color for icons */
+    color: #fff;
+    /* White color for icons */
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
@@ -179,14 +192,17 @@ header h1 {
 }
 
 /* Hover effect for skill icons */
-.skill:hover i, .skill:hover .skill-icon {
-    color: #1f6feb; /* Darker shade on hover */
+.skill:hover i,
+.skill:hover .skill-icon {
+    color: #1f6feb;
+    /* Darker shade on hover */
     transform: scale(1.2);
 }
 
 .skill-name {
     font-size: 1rem;
-    color: #fff; /* White color for skill names */
+    color: #fff;
+    /* White color for skill names */
     margin-top: 10px;
     opacity: 0;
     max-height: 0;
@@ -266,7 +282,7 @@ footer {
 
 /* Testimonials Section */
 .testimonials-section {
-    grid-area: inherit; 
+    grid-area: inherit;
     padding: 40px 20px;
     background-color: #161b22;
     color: #c9d1d9;
@@ -352,7 +368,8 @@ footer {
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    margin: 0; /* No margin needed; grid layout handles spacing */
+    margin: 0;
+    /* No margin needed; grid layout handles spacing */
 }
 
 .certification-card:hover {
@@ -379,7 +396,7 @@ footer {
     line-height: 1.6;
 }
 
-h2{
+h2 {
     color: white;
 }
 
@@ -396,12 +413,12 @@ h2{
     z-index: 1000;
     font-size: 20px;
     cursor: pointer;
-  }
+}
 
-  .back-to-top i {
+.back-to-top i {
     margin: 0;
-  }
-  
+}
+
 /* Media Queries */
 @media (max-width: 768px) {
     .about-section h1.title {
@@ -433,6 +450,7 @@ h2{
     .certification-card {
         width: 90%;
     }
+
     .navbar {
         flex-direction: column;
         gap: 1rem;
@@ -443,20 +461,29 @@ h2{
         color: black !important;
     }
 
-/* Skill Container with Flexbox */
-.skill-container {
-    display: flex; /* Ensure Flexbox is active */
-    flex-direction: row; /* Arrange items horizontally */
-    gap: 10px; /* Space between items */
-    padding: 8px; /* Adjust padding for smaller devices */
-    overflow-x: auto; /* Allow horizontal scrolling if items overflow */
-}
+    /* Skill Container with Flexbox */
+    .skill-container {
+        display: flex;
+        /* Ensure Flexbox is active */
+        flex-direction: row;
+        /* Arrange items horizontally */
+        gap: 10px;
+        /* Space between items */
+        padding: 8px;
+        /* Adjust padding for smaller devices */
+        overflow-x: auto;
+        /* Allow horizontal scrolling if items overflow */
+    }
 
-/* Individual Skill Icon */
-.skill-container .skill-icon {
-    max-width: 100%; /* Ensure icons don't exceed the container's width */
-    width: 90px; /* Adjust width of icons */
-    height: auto; /* Adjust height of icons */
-    object-fit: contain; /* Ensure icons maintain their aspect ratio */
-}
+    /* Individual Skill Icon */
+    .skill-container .skill-icon {
+        max-width: 100%;
+        /* Ensure icons don't exceed the container's width */
+        width: 90px;
+        /* Adjust width of icons */
+        height: auto;
+        /* Adjust height of icons */
+        object-fit: contain;
+        /* Ensure icons maintain their aspect ratio */
+    }
 }

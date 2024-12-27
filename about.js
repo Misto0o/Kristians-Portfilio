@@ -2,7 +2,7 @@
 function toggleNav() {
     const navLinks = document.getElementById('nav-links');
     const menuToggle = document.querySelector('.navbar-burger');
-    
+
     // Toggle the 'is-active' class to open/close the menu
     navLinks.classList.toggle('is-active');
     menuToggle.classList.toggle('is-active');
