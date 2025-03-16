@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
+  <link rel="stylesheet" href="project.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
+
+  <!-- CSS Frameworks and Libraries -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="icon" href="PortfilioFaviocn\favicon-32x32.png" type="image/x-icon">
+  <!-- Open Graph meta tags -->
+
+  <meta property="og:title" content="Kristian`s Portfolio" />
+  <meta property="og:description" content="Front-End Web Developer" />
+  <meta property="og:image" content='PortfilioFaviocn\favicon-32x32.png' />
+  <!-- Replace with actual image URL -->
+  <meta property="og:url" content="https://builtbykristian.netlify.app" />
+  <!-- Replace with actual URL -->
+  <meta property="og:type" content="website" />
+</head>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="navbar" id="header" data-aos="fade-in" data-aos-duration="450">
+    <div class="container">
+      <div class="navbar-brand">
+        <h1 class="navbar-item">Kristian Cook</h1>
+        <button class="navbar-burger" aria-label="Toggle Navigation" onclick="toggleNav()">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+      </div>
+      <div id="nav-links" class="navbar-menu">
+        <div class="navbar-end">
+          <a class="navbar-item" href="index.html">Home</a>
+          <a class="navbar-item" href="about.html">About</a>
+          <a class="navbar-item" href="index.html#contact">Contact</a>
+          <a class="navbar-item" href="resume.html">Resume</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects-section">
+    <div class="container">
+      <h2 class="section-title" data-aos="fade-up" data-aos-duration="800">My Projects</h2>
+
+      <div class="projects-grid">
+        <!-- Project Card 1 - Featured -->
+        <div class="project-card featured-project" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
+          <span class="featured-badge">Featured</span>
+          <div class="card-image">
+            <img src="images/KearnsRobotics.png" alt="Kearns Robotics" class="project-image">
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="project-info">
+              <h3 class="title">Kearns Robotics</h3>
+              <p>A robotics website showcasing FTC team achievements, competitions, and technical resources.</p>
+              <div class="project-technologies">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://kearnsrobotics.netlify.app" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Misto0o/Misto0o-KearnsRobotics-Website/tree/main/FTC%20Kearns%20robitics%20website"
+                target="_blank" class="github-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 2 -->
+        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+          <div class="card-image">
+            <img src="images/justCodeBruh.png" alt="Just Code Bruh" class="project-image">
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="project-info">
+              <h3 class="title">Just Code Bruh</h3>
+              <p>A platform for sharing coding resources, tutorials, and programming challenges for developers.</p>
+              <div class="project-technologies">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS</span>
+                <span class="tech-tag">Javascript</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://justcodebruh.netlify.app" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Misto0o/JustCodeBruh" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 3 -->
+        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
+          <div class="card-image">
+            <img src="images/Anime Search.png" alt="Manga Search" class="project-image">
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="project-info">
+              <h3 class="title">Manga Search</h3>
+              <p>A Chrome extension to search anime by name and get detailed information about episodes, ratings, and
+                reviews.</p>
+              <div class="project-technologies">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">MangaAPI</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://mangaanimesearch.netlify.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Misto0o/Chrome-Extention" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 4 - Mist.AI -->
+        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="150">
+          <div class="card-image">
+            <img src="images/mistai.png" alt="Mist.AI" class="project-image">
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="project-info">
+              <h3 class="title">Mist.AI</h3>
+              <p>An AI-powered application that leverages machine learning for predictive analysis and data
+                visualization.</p>
+              <div class="project-technologies">
+                <span class="tech-tag">Python</span>
+                <span class="tech-tag">Javascript</span>
+                <span class="tech-tag">Flask</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://mistai.netlify.app" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Misto0o/Mist.AI" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 5 - Weather App -->
+        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="250">
+          <div class="card-image">
+            <img src="images/weatherapp.png" alt="Weather App" class="project-image">
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="project-info">
+              <h3 class="title">Weather App</h3>
+              <p>A responsive weather application that provides real-time forecasts, location-based weather updates, and
+                interactive maps.</p>
+              <div class="project-technologies">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">OpenWeather API</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://mistweatherapp.netlify.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Misto0o/WeatherApp" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 6 - PBM-EVCars -->
+        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="350">
+          <div class="card-image">
+            <img src="images/EVs.png" alt="PBM-EVCars" class="project-image">
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="project-info">
+              <h3 class="title">PBM-EVCars</h3>
+              <p>An electric vehicle information platform featuring specifications, comparisons, and charging
+                infrastructure data.</p>
+              <div class="project-technologies">
+                <span class="tech-tag">HTML/CSS</span>
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">EV-Research</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://futurechargedev.netlify.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Misto0o/PBM-EVCars" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project Card 7 - Google Maps Clone -->
+        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
+          <div class="card-image">
+            <img src="images/GoogleMaps.png" alt="Google Maps Clone" class="project-image">
+            <div class="card-overlay">
+            </div>
+          </div>
+          <div class="card-content">
+            <div class="project-info">
+              <h3 class="title">Google Maps Clone</h3>
+              <p>A functional maps application with navigation features, location search, and custom styling options.
+              </p>
+              <div class="project-technologies">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">GoogleMaps API</span>
+                <span class="tech-tag">Geolocation</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://mistmapsclone.netlify.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Misto0o/GoogleMapsClone" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Back to Top Button -->
+  <button id="backToTop" class="back-to-top" data-aos="fade-up" data-aos-duration="1500">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <footer>
+    <p>© 2024 Kristian Cook</p>
+  </footer>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script src="project.js"></script>
+<script>
+  AOS.init(); // Initialize AOS
+  window.addEventListener('load', function () {
+    AOS.init(); // Initialize AOS on load
+    AOS.refresh(); // Refresh AOS to apply animations correctly
+  });
+</script>
+
+</html>

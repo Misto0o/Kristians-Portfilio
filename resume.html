@@ -9,6 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap"
         rel="stylesheet">
     <link rel="preload" href="resume.css" as="style" onload="this.rel='stylesheet'">
+    <noscript>
+        <link rel="stylesheet" href="resume.css">
+    </noscript>
     <!-- Frameworks and Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -20,6 +23,7 @@
     <meta property="og:image" content="PortfilioFaviocn/favicon-32x32.png">
     <meta property="og:url" content="https://builtbykristian.netlify.app">
     <meta property="og:type" content="website">
+    <meta name="description" content="Kristian Cook's professional resume and portfolio">
 </head>
 
 <body>
@@ -28,24 +32,26 @@
         <div class="container">
             <div class="navbar-brand">
                 <h1 class="navbar-item">Kristian Cook</h1>
-                <button class="navbar-burger" aria-label="Toggle Navigation" onclick="toggleNav()">
+                <button class="navbar-burger" aria-label="Toggle Navigation" aria-expanded="false"
+                    aria-controls="nav-links" onclick="toggleNav()">
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                     <span aria-hidden="true"></span>
                 </button>
             </div>
-            <div id="nav-links" class="navbar-menu">
+            <nav id="nav-links" class="navbar-menu" aria-label="Main navigation">
                 <div class="navbar-end">
                     <a class="navbar-item" href="index.html">Home</a>
                     <a class="navbar-item" href="about.html">About</a>
-                    <a class="navbar-item" href="#projects">Projects</a>
-                    <a class="navbar-item" href="#contact">Contact</a>
+                    <a class="navbar-item" href="project.html">Projects</a>
+                    <a class="navbar-item" href="index.html#contact">Contact</a>
                 </div>
-            </div>
+            </nav>
         </div>
     </header>
+
     <!-- Main Content -->
-    <div class="container content">
+    <main class="container content">
         <h1 class="title">Resume</h1>
         <p class="subtitle">Welcome to my resume page! You can view my resume directly below or download it as a Word
             document.</p>
@@ -54,8 +60,8 @@
         <section class="resume-link box" data-aos="fade-up" data-aos-duration="800">
             <h2 class="title is-4">Download My Resume</h2>
             <p>
-                <a href="Assets/Kristian-Michael-Cook Resume.docx" download class="button is-primary is-rounded">
-                    <i class="fas fa-download"></i> Download Resume (Word)
+                <a href="Assets\Kristian-Michael-Cook Resume.docx" download class="button is-primary is-rounded">
+                    <i class="fas fa-download" aria-hidden="true"></i> Download Resume (Word)
                 </a>
             </p>
         </section>
@@ -64,22 +70,19 @@
         <section class="google-docs-embed" data-aos="fade-up" data-aos-duration="800">
             <h2 class="title is-4">View My Resume</h2>
             <iframe
-                src="https://docs.google.com/document/d/e/2PACX-1vQBh6p7GAm4FpJxTlsDM3T6cLgsQaBxOlkv_5YU9--jSkvJfbvJPA9oZ7kNpbp5gA/pub?embedded=true"
-                allowfullscreen>
-            </iframe>
+                src="https://docs.google.com/document/d/e/2PACX-1vTX02z-QbkMnXwGksNK0ll_QWDgN68FZNF9PdtFbQbwTlTM_MEP-TR_m5CjXyNRTTUsF_EVf0DtAwq2/pub?embedded=true"
+                width="100%" height="600" frameborder="0" title="Resume"></iframe>
+
         </section>
-    </div>
+    </main>
 
     <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" data-aos="fade-up" data-aos-duration="1500">
-        <i class="fa-solid fa-arrow-up"></i>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top" data-aos="fade-up" data-aos-duration="1500">
+        <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <!-- Footer -->
-    <footer class="footer" data-aos="fade-up" data-aos-duration="1600">
-        <div class="content has-text-centered">
-            <p>&copy; 2024 Kristian Cook | Front-End Developer</p>
-        </div>
+    <footer>
+        <p>© 2024 Kristian Cook</p>
     </footer>
 
     <!-- JavaScript -->

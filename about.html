@@ -1,16 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Kristian Cook</title>
     <!-- Preloading the stylesheet -->
     <link rel="preload" href="about.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript><link rel="stylesheet" href="about.css"></noscript>
-    
+    <noscript>
+        <link rel="stylesheet" href="about.css">
+    </noscript>
+
     <!-- Other styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
@@ -26,6 +31,7 @@
     <!-- Replace with actual URL -->
     <meta property="og:type" content="website" />
 </head>
+
 <body>
     <!-- Header -->
     <header class="navbar" id="header">
@@ -41,6 +47,7 @@
             <div id="nav-links" class="navbar-menu">
                 <div class="navbar-end">
                     <a class="navbar-item" href="index.html">Home</a>
+                    <a class="navbar-item" href="project.html">Projects</a>
                     <a class="navbar-item" href="index.html#contact">Contact</a>
                     <a class="navbar-item" href="resume.html">Resume</a>
                 </div>
@@ -48,13 +55,15 @@
         </div>
     </header>
 
-    
+
     <!-- Main Container -->
     <div class="main-container">
         <!-- About Me Section -->
         <section id="about" class="about-section" data-aos="fade-up" data-aos-duration="750">
             <h1 class="title is-1">About Me</h1>
-            <p class="subtitle is-4">I'm Kristian Cook, a 14-year-old front-end developer with a passion for creating impactful websites. My goal is to become a senior developer, working remotely to help others and make a difference.</p>
+            <p class="subtitle is-4">I'm Kristian Cook, a 14-year-old front-end developer with a passion for creating
+                impactful websites. My goal is to become a senior developer, working remotely to help others and make a
+                difference.</p>
         </section>
 
         <div class="skill-container">
@@ -68,74 +77,87 @@
                         <p class="skill-name">HTML</p>
                     </div>
                     <!-- CSS -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="100">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="100">
                         <i class="lab la-css3-alt"></i>
                         <p class="skill-name">CSS</p>
                     </div>
                     <!-- JavaScript -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="200">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="200">
                         <i class="lab la-js"></i>
                         <p class="skill-name">JavaScript</p>
                     </div>
                     <!-- Python -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="300">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="300">
                         <i class="lab la-python"></i>
                         <p class="skill-name">Python</p>
                     </div>
                     <!-- PHP -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="400">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="400">
                         <i class="lab la-php"></i>
                         <p class="skill-name">PHP</p>
                     </div>
                     <!-- SQL -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="500">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="500">
                         <i class="bx bxl-postgresql"></i>
                         <p class="skill-name">SQL</p>
                     </div>
                     <!-- Java -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="600">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="600">
                         <i class="lab la-java"></i>
                         <p class="skill-name">Java</p>
                     </div>
                     <!-- C -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="700">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="700">
                         <i class="las la-copyright"></i>
                         <p class="skill-name">C</p>
                     </div>
                     <!-- jQuery -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="800">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="800">
                         <i class="bx bxl-jquery"></i>
                         <p class="skill-name">jQuery</p>
                     </div>
                     <!-- Git -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="900">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="900">
                         <i class="lab la-git"></i>
                         <p class="skill-name">Git</p>
                     </div>
                     <!-- Redux -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1000">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="1000">
                         <i class="bx bxl-react"></i>
                         <p class="skill-name">React</p>
                     </div>
                     <!-- Bootstrap -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1100">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="1100">
                         <i class="fab fa-bootstrap"></i>
                         <p class="skill-name">Bootstrap</p>
                     </div>
                     <!-- Sass -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1200">
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="1200">
                         <i class="lab la-sass"></i>
                         <p class="skill-name">Sass</p>
                     </div>
-                        <!-- Excel -->
-                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500" data-aos-delay="1100">
+                    <!-- Excel -->
+                    <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                        data-aos-delay="1100">
                         <i class="fa-solid fa-file-excel"></i>
                         <p class="skill-name">Excel</p>
                     </div>
                 </div>
             </section>
         </div>
-    
+
         <!-- Interests Section -->
         <section class="portfolio-section" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="title is-3">My Interests</h2>
@@ -156,30 +178,35 @@
             <blockquote>"Amazing creativity and problem-solving skills." - A Mentor</blockquote>
         </section>
     </div>
-<!-- Certifications Section -->
-<section id="certifications" class="certifications-section" data-aos="fade-up" data-aos-duration="1000">
-    <h2>My Certifications</h2>
-    <div class="certifications-container">
-        <!-- Certification 1 -->
-        <a href="https://courses.edx.org/certificates/fb2c525c49d643139760d2eb270e3971?_gl=1*ejx18t*_gcl_au*MTIxODIzMjEyNC4xNzMwMTIyMTU0*_ga*MTY0Mjc5MTAwOS4xNzMwMTIyMTUz*_ga_D3KS4KMDT0*MTczMzg0MDUwOS4yLjEuMTczMzg0MjM5My40Mi4wLjA." target="_blank" class="certification-card" data-aos="flip-left" data-aos-duration="1000">
-            <img src="images/CS50XVerified.png" alt="Certification 1" class="certification-image">
-            <h3>Harvard CS50</h3>
-            <p>Issued by EDX</p>
-        </a>
-        <!-- Certification 2 -->
-        <a href="https://www.freecodecamp.org/certification/MistOnYT/front-end-development-libraries" target="_blank" class="certification-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
-            <img src="images/Screenshot 2024-11-09 at 16-40-52 Profile freeCodeCamp.org.png" alt="Certification 2" class="certification-image">
-            <h3>Front End Development Libraries</h3>
-            <p>Issued by freeCodeCamp</p>
-        </a>
-        <!-- Certification 3 -->
-        <a href="https://drive.google.com/file/d/1AIiIBQdXgcWaD4VkL1ENPSKtiwEQtHWj/view?usp=sharing" target="_blank" class="certification-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
-            <img src="images/Cert1219816370.pdf.jpg" alt="Certification 3" class="certification-image">
-            <h3>Excel Associates</h3>
-            <p>Issued by Microsoft Office Specialist</p>
-        </a>
-    </div>
-</section>
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications-section" data-aos="fade-up" data-aos-duration="1000">
+        <h2>My Certifications</h2>
+        <div class="certifications-container">
+            <!-- Certification 1 -->
+            <a href="https://courses.edx.org/certificates/fb2c525c49d643139760d2eb270e3971?_gl=1*ejx18t*_gcl_au*MTIxODIzMjEyNC4xNzMwMTIyMTU0*_ga*MTY0Mjc5MTAwOS4xNzMwMTIyMTUz*_ga_D3KS4KMDT0*MTczMzg0MDUwOS4yLjEuMTczMzg0MjM5My40Mi4wLjA."
+                target="_blank" class="certification-card" data-aos="flip-left" data-aos-duration="1000">
+                <img src="images/CS50XVerified.png" alt="Certification 1" class="certification-image">
+                <h3>Harvard CS50</h3>
+                <p>Issued by EDX</p>
+            </a>
+            <!-- Certification 2 -->
+            <a href="https://www.freecodecamp.org/certification/MistOnYT/front-end-development-libraries"
+                target="_blank" class="certification-card" data-aos="flip-left" data-aos-duration="1000"
+                data-aos-delay="100">
+                <img src="images/Screenshot 2024-11-09 at 16-40-52 Profile freeCodeCamp.org.png" alt="Certification 2"
+                    class="certification-image">
+                <h3>Front End Development Libraries</h3>
+                <p>Issued by freeCodeCamp</p>
+            </a>
+            <!-- Certification 3 -->
+            <a href="https://drive.google.com/file/d/1AIiIBQdXgcWaD4VkL1ENPSKtiwEQtHWj/view?usp=sharing" target="_blank"
+                class="certification-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
+                <img src="images/Cert1219816370.pdf.jpg" alt="Certification 3" class="certification-image">
+                <h3>Excel Associates</h3>
+                <p>Issued by Microsoft Office Specialist</p>
+            </a>
+        </div>
+    </section>
 
     <!-- Back to Top Button -->
     <button id="backToTop" class="back-to-top" data-aos="fade-up" data-aos-duration="1500">
@@ -192,4 +219,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="about.js"></script>
 </body>
+
 </html>
