@@ -368,6 +368,16 @@ header h1 {
   .section-title {
     font-size: 2rem;
   }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar a {
+    font-size: 0.9rem;
+    color: black !important;
+  }
 }
 
 /* Animation for project cards */

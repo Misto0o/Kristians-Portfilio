@@ -1,4 +1,6 @@
 // Toggle the navigation menu
+const birthDate = new Date("2008-04-02T00:00:00Z");
+
 function toggleNav() {
     const navLinks = document.getElementById('nav-links');
     const menuToggle = document.querySelector('.navbar-burger');
@@ -22,6 +24,29 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         }
     });
 });
+
+function updateLiveAge() {
+    const birthDate = new Date("2010-04-02T00:00:00Z"); // Your birthday
+    const now = new Date();
+
+    const diffMs = now - birthDate;
+
+    const msPerYear = 1000 * 60 * 60 * 24 * 365.2425;
+    const msPerMonth = msPerYear / 12;
+
+    const years = Math.floor(diffMs / msPerYear);
+    const monthsDecimal = (diffMs % msPerYear) / msPerMonth;
+
+    // Show years and months with 2 decimals
+    const displayText = `${years} years and ${monthsDecimal.toFixed(2)} months`;
+
+    document.getElementById("live-age").textContent = displayText;
+}
+
+setInterval(updateLiveAge, 1000);
+updateLiveAge();
+
+
 
 // Function to adjust layout based on screen size
 function checkScreenSize() {

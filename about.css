@@ -162,6 +162,13 @@ header h1 {
     /* Center container horizontally */
 }
 
+.skills-section+.skills-section {
+    border-top: 1.5px solid #30363d;
+    /* subtle divider */
+    padding-top: 2rem;
+    margin-top: 2rem;
+}
+
 /* Skill Icons Section */
 .skills-icons {
     display: flex;
@@ -485,5 +492,32 @@ h2 {
         /* Adjust height of icons */
         object-fit: contain;
         /* Ensure icons maintain their aspect ratio */
+    }
+}
+
+@media (max-width: 768px) {
+    .skill-container {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        /* space between Fluent and Certifications sections */
+        padding: 1rem;
+        max-width: 100%;
+    }
+
+    .skills-icons {
+        justify-content: center;
+        gap: 25px;
+    }
+
+    .skill {
+        flex: 0 1 100px;
+        /* shrink on mobile */
+    }
+
+    .skills-section h2 {
+        font-size: 1.6rem;
+        text-align: center;
+        margin-bottom: 1.2rem;
     }
 }
