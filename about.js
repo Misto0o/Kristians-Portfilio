@@ -46,8 +46,6 @@ function updateLiveAge() {
 setInterval(updateLiveAge, 1000);
 updateLiveAge();
 
-
-
 // Function to adjust layout based on screen size
 function checkScreenSize() {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
