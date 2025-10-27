@@ -296,6 +296,9 @@ footer {
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
+    width: 45%;
+    margin: 20px auto;
+    /* center horizontally and add vertical spacing */
 }
 
 .testimonials-section h2 {
@@ -314,13 +317,16 @@ footer {
 
 /* Portfolio Section */
 .portfolio-section {
-    grid-area: portfolio;
+    grid-area: inherit;
     padding: 40px 20px;
     background-color: #161b22;
     color: #c9d1d9;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     text-align: center;
+    width: 45%;
+    margin: 20px auto;
+    /* center horizontally and add vertical spacing */
 }
 
 .portfolio-section h2 {
