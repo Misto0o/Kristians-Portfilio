@@ -262,6 +262,7 @@ footer {
     text-align: center;
     color: #8b949e;
     margin-top: 40px;
+    line-height: 2.5 !important;
 }
 
 /* Contact Button */

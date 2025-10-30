@@ -79,3 +79,5 @@ if (window.innerWidth <= 768) {
 } else {
     document.documentElement.style.scrollBehavior = 'smooth';
 }
+
+document.getElementById("year").textContent = new Date().getFullYear();

@@ -123,7 +123,8 @@
           <div class="card-content">
             <div class="project-info">
               <h3 class="title">Manga Search</h3>
-              <p>A Chrome extension I made for CS50X to search anime by name and get detailed information about episodes, ratings, and
+              <p>A Chrome extension I made for CS50X to search anime by name and get detailed information about
+                episodes, ratings, and
                 reviews.</p>
               <div class="project-technologies">
                 <span class="tech-tag">JavaScript</span>
@@ -145,6 +146,7 @@
         <!-- Project Card 4 - Mist.AI -->
         <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="150">
           <div class="card-image">
+            <span class="featured-badge">Featured</span>
             <img src="images/mistai.png" alt="Mist.AI" class="project-image">
             <div class="card-overlay">
             </div>
@@ -258,6 +260,36 @@
             </div>
           </div>
         </div>
+
+        <!-- Project Card 8 - Portfolio Preview -->
+        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="450">
+          <div class="card-image">
+            <img src="images/filmpilot.png" alt="Movie App" class="project-image">
+            <div class="card-overlay"></div>
+          </div>
+          <div class="card-content">
+            <div class="project-info">
+              <h3 class="title">Film Pilot</h3>
+              <p>A lightweight, dark-themed movie discovery web app using the TMDb API to browse, filter, favorite, and
+                watch trailers. </p>
+              <div class="project-technologies">
+                <span class="tech-tag">HTML5</span>
+                <span class="tech-tag">CSS3</span>
+                <span class="tech-tag">JavaScript</span>
+              </div>
+            </div>
+            <div class="project-links">
+              <a href="https://flimpilot.netlify.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Demo
+              </a>
+              <a href="https://github.com/Misto0o/FlimPilot" target="_blank" class="github-link">
+                <i class="fab fa-github"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Add more project cards HERE! as needed -->
+
       </div>
     </div>
   </section>
@@ -267,7 +299,7 @@
   </button>
 
   <footer>
-    <p>© 2024 Kristian Cook</p>
+    <p>© <span id="year"></span> Kristian Cook</p>
   </footer>
 
 </body>

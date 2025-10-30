@@ -87,3 +87,4 @@ document.addEventListener('DOMContentLoaded', function () {
     AOS.refresh();
   });
 });
+document.getElementById("year").textContent = new Date().getFullYear();

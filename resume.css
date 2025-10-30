@@ -146,6 +146,7 @@ footer {
     padding: 20px;
     color: white;
     text-align: center;
+    line-height: 2.5 !important;
 }
 
 /* Styling for the Resume Page */

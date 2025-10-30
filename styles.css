@@ -276,6 +276,10 @@ header h1 {
     line-height: 1.4;
 }
 
+footer {
+    line-height: 2.5 !important;
+}
+
 /* Keyframes for Fade-in Animation */
 @keyframes fadeIn {
     from {

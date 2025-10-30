@@ -349,6 +349,10 @@ header h1 {
   cursor: pointer;
 }
 
+footer {
+  line-height: 2.5 !important;
+}
+
 .back-to-top i {
   margin: 0;
 }
