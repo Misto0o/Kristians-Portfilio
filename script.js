@@ -20,6 +20,62 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+function addAnimatedDots(sectionId) {
+    const section = document.getElementById(sectionId);
+    const canvas = document.createElement('canvas');
+    canvas.style.cssText = 'position:absolute;inset:0;width:100%;height:100%;pointer-events:none;z-index:0;opacity:0.35;';
+    section.style.position = 'relative';
+    section.style.overflow = 'hidden';
+    section.prepend(canvas);
+
+    const ctx = canvas.getContext('2d');
+    let dots = [];
+
+    function resize() {
+        canvas.width = section.offsetWidth;
+        canvas.height = section.offsetHeight;
+    }
+
+    function initDots() {
+        const count = Math.floor((canvas.width * canvas.height) / 10000);
+        dots = Array.from({ length: count }, () => ({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 2 + 1,
+            vx: (Math.random() - 0.5) * 0.4, // drift speed X
+            vy: (Math.random() - 0.5) * 0.4, // drift speed Y
+        }));
+    }
+
+    function animate() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        dots.forEach(d => {
+            d.x += d.vx;
+            d.y += d.vy;
+            // wrap around edges
+            if (d.x < 0) d.x = canvas.width;
+            if (d.x > canvas.width) d.x = 0;
+            if (d.y < 0) d.y = canvas.height;
+            if (d.y > canvas.height) d.y = 0;
+
+            ctx.beginPath();
+            ctx.arc(d.x, d.y, d.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+        });
+        requestAnimationFrame(animate);
+    }
+
+    resize();
+    initDots();
+    animate();
+
+    window.addEventListener('resize', () => { resize(); initDots(); });
+}
+
+addAnimatedDots('timeline');
+addAnimatedDots('contact');
+
 
 // Back to Top Button functionality
 const backToTopButton = document.getElementById("backToTop");

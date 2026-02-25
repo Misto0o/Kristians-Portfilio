@@ -8,12 +8,13 @@
     <!-- Preloading the stylesheet -->
     <link rel="preload" href="about.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript>
-        <link rel="stylesheet" href="about.css?v=2">
+        <link rel="stylesheet" href="about.css?v=3">
     </noscript>
 
     <!-- Other styles -->
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NG+Modern:wght@100..400&display=swap"
-        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/line-awesome@1.3.0/dist/line-awesome/css/line-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/boxicons/css/boxicons.min.css" rel="stylesheet">
@@ -62,9 +63,12 @@
         <section id="about" class="about-section" data-aos="fade-up" data-aos-duration="750">
             <h1 class="title is-1">About Me</h1>
             <p class="subtitle is-4">
-                I'm Kristian Cook, a <span id="live-age">15 years and 0.00 months</span>-old front-end developer with a
-                passion for creating impactful websites. My goal is to become a senior developer, working remotely to
-                help others and make a difference.
+                I'm a <span id="live-age">15 years and 0.00 months</span> old self-taught Front-End Developer
+                I love creating things with coding whether it's
+                building a robotics team site from scratch or experimenting with new frameworks just to see
+                what's possible. When I'm not coding, you'll find me doing cardistry, competing in FTC robotics,
+                or staying busy with after school activities. My goal is to grow into a senior developer one day,
+                working remotely to build things that actually help people.
             </p>
         </section>
 
@@ -72,7 +76,7 @@
             <div class="skills-wrapper">
                 <!-- Fluent Skills -->
                 <section class="skills-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                    <h2>Fluent In</h2>
+                    <h2>My Tech Stack</h2>
                     <div class="skills-icons">
                         <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500">
                             <i class="lab la-html5"></i>
@@ -113,38 +117,6 @@
                             <i class="lab la-sass"></i>
                             <p class="skill-name">Sass</p>
                         </div>
-                    </div>
-                </section>
-
-                <!-- Certifications / Decent Knowledge -->
-                <section class="skills-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                    <h2>Certifications & Knowledge</h2>
-                    <div class="skills-icons">
-                        <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
-                            data-aos-delay="400">
-                            <i class="lab la-php"></i>
-                            <p class="skill-name">PHP</p>
-                        </div>
-                        <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
-                            data-aos-delay="500">
-                            <i class="bx bxl-postgresql"></i>
-                            <p class="skill-name">SQL</p>
-                        </div>
-                        <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
-                            data-aos-delay="600">
-                            <i class="lab la-java"></i>
-                            <p class="skill-name">Java</p>
-                        </div>
-                        <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
-                            data-aos-delay="700">
-                            <i class="las la-copyright"></i>
-                            <p class="skill-name">C</p>
-                        </div>
-                        <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
-                            data-aos-delay="800">
-                            <i class="bx bxl-jquery"></i>
-                            <p class="skill-name">jQuery</p>
-                        </div>
                         <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
                             data-aos-delay="1100">
                             <i class="fa-solid fa-file-excel"></i>
@@ -152,27 +124,67 @@
                         </div>
                     </div>
                 </section>
+
+                <!-- Certification Knowledge -->
+                <section class="skills-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <h2>Also Familiar with:</h2>
+                    <div class="skills-icons">
+                        <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                            data-aos-delay="500">
+                            <i class="bx bxl-postgresql"></i>
+                            <p class="skill-name">SQL-Lite</p>
+                        </div>
+                        <div class="skill" onclick="toggleSkillInfo(this)" data-aos="zoom-in" data-aos-duration="500"
+                            data-aos-delay="600">
+                            <i class="lab la-java"></i>
+                            <p class="skill-name">Java</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </div>
-
-        <!-- Interests Section -->
         <section class="portfolio-section" data-aos="fade-up" data-aos-duration="1000">
             <h2 class="title is-3">My Interests</h2>
-            <ul>
-                <li><a href="https://www.ecgrobotics.org/ftc6183" target="_blank">Robotics</a></li>
-                <li><a href="https://www.youtube.com/@MisttOnYT" target="_blank">Gaming</a></li>
-                <li><a href="/your-movie-app" target="_blank">Watching TV shows</a></li>
-                <li><a href="https://music.youtube.com/@MisttOnYT" target="_blank">Listening to Music</a></li>
-                <li><a href="https://seoscholars.org" target="_blank">SEO Scholars</a></li>
-                <li><a href="https://www.chess.com/member/MistOnYT" target="_blank">Chess</a></li>
-            </ul>
+            <div class="interests-grid">
+                <a href="https://www.ecgrobotics.org/ftc6183" target="_blank" class="interest-card">
+                    <i class="fas fa-robot"></i>
+                    <h3>FTC Robotics</h3>
+                    <p>Team 6183 Triple Paradox — FTC Robotics competitor programming robots in Java for national
+                        competition.</p>
+                </a>
+                <a href="https://seoscholars.org" target="_blank" class="interest-card">
+                    <i class="fas fa-graduation-cap"></i>
+                    <h3>SEO Scholars</h3>
+                    <p>An 8-year college prep program pushing me toward M.I.T and beyond.</p>
+                </a>
+                <a href="https://www.chess.com/member/MistOnYT" target="_blank" class="interest-card">
+                    <i class="fas fa-chess-knight"></i>
+                    <h3>Chess</h3>
+                    <p>Sharpening strategy and pattern recognition one game at a time.</p>
+                </a>
+                <div class="interest-card" style="cursor:default;">
+                    <i class="fas fa-hand-sparkles"></i>
+                    <h3>Cardistry</h3>
+                    <p>The non-magical, performance art of manipulating playing cards to create intricate, visually
+                        stunning displays</p>
+                </div>
+            </div>
         </section>
 
         <!-- Testimonials Section -->
         <section class="testimonials-section" data-aos="fade-up" data-aos-duration="1000">
-            <h2 class="title is-3">Testimonials</h2>
-            <blockquote>"Your work on the KearnsRobotics website was impressive!" - A Peer</blockquote>
-            <blockquote>"Amazing creativity and problem-solving skills." - A Mentor</blockquote>
+            <h2 class="title is-3">What is SEO Scholars?</h2>
+            <p>
+                I'm part of <strong>SEO Scholars</strong>, a <strong>free 8-year program</strong> that takes students
+                all the way through college. It shifted everything for me I went from not thinking college was in
+                my future at all to setting my sights on <strong>M.I.T</strong>. The program pushes me with math,
+                reading, and IE development classes that are competitive on a global level, keeping me college-ready
+                years before I even apply. They've been a big part of pushing me to aim higher and go further than
+                I thought I would and that drive carries directly into everything I build.
+            </p>
+            <a href="https://youtu.be/qIJDAqCVDE4?si=gGOXx1n0nXrfkI5s" target="_blank" class="button is-link mt-4">
+                Learn More About SEO Scholars
+            </a>
         </section>
     </div>
     <!-- Certifications Section -->
@@ -220,7 +232,7 @@
     </footer>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="about.js?v=2"></script>
+    <script src="about.js?v=3"></script>
 </body>
 
 </html>

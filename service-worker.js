@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-cache-v2';  // 🔁 Update this on every deploy
+const CACHE_NAME = 'portfolio-cache-v3';  // 🔁 Update this on every deploy
 
 const ASSETS_TO_CACHE = [
   '/',
