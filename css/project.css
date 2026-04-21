@@ -13,7 +13,7 @@ body {
   text-align: center;
   font-family: "Playwrite NZ Basic", sans-serif;
   font-optical-sizing: auto;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal;
 }
 
@@ -25,68 +25,6 @@ h4 {
 }
 
 label {
-  color: white !important;
-}
-
-/* Header and Navigation */
-header.navbar {
-  display: flex;
-  background-color: #161b22;
-  padding: 15px 0;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  gap: 2rem;
-  align-items: center;
-}
-
-header h1 {
-  font-size: 1.8rem;
-  color: #fff;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.navbar a {
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  padding: 10px 20px;
-  position: relative;
-  transition: all 0.3s ease;
-  text-align: center;
-}
-
-.navbar a::before {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #003cff;
-  transform: scaleX(0);
-  transform-origin: bottom right;
-  transition: transform 0.3s ease;
-}
-
-.navbar a:hover::before {
-  transform: scaleX(1);
-  transform-origin: bottom left;
-}
-
-.navbar-item:hover {
-  color: #0033ff !important;
-}
-
-.navbar-item {
-  color: white !important;
-}
-
-.navbar-burger {
   color: white !important;
 }
 
@@ -125,7 +63,7 @@ header h1 {
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: #003cff;
+  background: #3498db;
 }
 
 /* Projects Grid */
@@ -193,12 +131,12 @@ header h1 {
   font-size: 1.6rem;
   color: #fff;
   margin-bottom: 0.75rem;
-  font-weight: 600;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
 .project-card:hover .project-info h3 {
-  color: #003cff;
+  color: #3498db;
 }
 
 .project-info p {
@@ -222,7 +160,7 @@ header h1 {
   padding: 4px 10px;
   border-radius: 20px;
   font-size: 0.75rem;
-  font-weight: 500;
+  font-weight: 600;
   transition: background-color 0.3s ease;
 }
 
@@ -253,7 +191,7 @@ header h1 {
 
 .project-link {
   color: #fff;
-  background-color: #003cff;
+  background-color: #3498db;
 }
 
 .github-link {
@@ -268,7 +206,7 @@ header h1 {
 }
 
 .project-link:hover {
-  background-color: #0029cc;
+  background-color: #3498db;
 }
 
 .github-link:hover {
@@ -329,7 +267,7 @@ header h1 {
   position: absolute;
   top: 15px;
   right: 15px;
-  background-color: #003cff;
+  background-color: #3498db;
   color: white;
   padding: 5px 12px;
   border-radius: 20px;
@@ -343,15 +281,19 @@ header h1 {
   position: fixed;
   bottom: 20px;
   right: 20px;
-  background-color: #007bff;
+  background-color: #3498db;
   color: white;
   border: none;
   border-radius: 50%;
-  padding: 10px;
+  width: 50px;
+  height: 50px;
   display: none;
   z-index: 1000;
   font-size: 20px;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 footer {

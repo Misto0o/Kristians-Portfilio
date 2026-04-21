@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects</title>
-  <link rel="stylesheet" href="project.css?v=3">
+  <link rel="stylesheet" href="css/project.css?v=3">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100&display=swap" rel="stylesheet">
@@ -25,31 +25,8 @@
   <!-- Replace with actual URL -->
   <meta property="og:type" content="website" />
 </head>
-</head>
 
 <body>
-  <!-- Header -->
-  <header class="navbar" id="header" data-aos="fade-in" data-aos-duration="450">
-    <div class="container">
-      <div class="navbar-brand">
-        <h1 class="navbar-item">Kristian Cook</h1>
-        <button class="navbar-burger" aria-label="Toggle Navigation" onclick="toggleNav()">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </button>
-      </div>
-      <div id="nav-links" class="navbar-menu">
-        <div class="navbar-end">
-          <a class="navbar-item" href="index.html">Home</a>
-          <a class="navbar-item" href="about.html">About</a>
-          <a class="navbar-item" href="index.html#contact">Contact</a>
-          <a class="navbar-item" href="resume.html">Resume</a>
-        </div>
-      </div>
-    </div>
-  </header>
-
   <!-- Projects Section -->
   <section id="projects" class="projects-section">
     <div class="container">
@@ -253,7 +230,7 @@
               </div>
             </div>
             <div class="project-links">
-              <a href="https://www.dsecsecurity.com/" target="_blank" class="project-link">
+              <a href="https://dsecsecurity.netlify.app/" target="_blank" class="project-link">
                 <i class="fas fa-external-link-alt"></i> Live Site
               </a>
               <a href="https://github.com/Misto0o/D-Sec-Secuirty-INC" target="_blank" class="github-link">
@@ -335,7 +312,7 @@
               </div>
             </div>
             <div class="project-links">
-              <a href="https://flimpilot.netlify.app/" target="_blank" class="project-link">
+              <a href="https://filmpilot.netlify.app/index.html" target="_blank" class="project-link">
                 <i class="fas fa-external-link-alt"></i> Live Demo
               </a>
               <a href="https://github.com/Misto0o/FlimPilot" target="_blank" class="github-link">
@@ -415,7 +392,8 @@
 
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="project.js?v=3"></script>
+<script src="js/project.js?v=3"></script>
+<script src="js/header.js"></script>
 <script>
   AOS.init(); // Initialize AOS
   window.addEventListener('load', function () {

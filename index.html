@@ -6,9 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristian Cook | Front-End Developer</title>
-
-    <!-- Preload Critical CSS -->
-    <link rel="preload" href="styles.css?v=2" as="style" onload="this.rel='stylesheet'">
+    <link rel="stylesheet" href="css/styles.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -32,28 +30,6 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="navbar" id="header" data-aos="fade-in" data-aos-duration="450">
-        <div class="container">
-            <div class="navbar-brand">
-                <h1 class="navbar-item">Kristian Cook</h1>
-                <button class="navbar-burger" aria-label="Toggle Navigation" onclick="toggleNav()">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </button>
-            </div>
-            <div id="nav-links" class="navbar-menu">
-                <div class="navbar-end">
-                    <a class="navbar-item" href="about.html">About</a>
-                    <a class="navbar-item" href="project.html">Projects</a>
-                    <a class="navbar-item" href="#contact">Contact</a>
-                    <a class="navbar-item" href="resume.html">Resume</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
     <!-- Hero Section -->
     <section id="landing" class="hero is-fullheight">
         <div class="container">
@@ -205,7 +181,7 @@
                             Integrated custom Fillout forms with webhooks to send submissions directly to the client's
                             email.
                         </p>
-                        <a href="https://www.dsecsecurity.com/" target="_blank">View Site</a>
+                        <a href="https://dsecsecurity.netlify.app/" target="_blank">View Site</a>
                     </div>
                 </div>
 
@@ -218,7 +194,8 @@
                             Contracted by an SEO Scholars mentor to build a minority-owned business discovery platform.
                             Used Google Places and Yelp APIs with React, HTML, and CSS to display and filter local
                             businesses.
-                            Implemented Firebase for user submissions, allowing businesses that are not listed on Google/Yelp to
+                            Implemented Firebase for user submissions, allowing businesses that are not listed on
+                            Google/Yelp to
                             be added.
                         </p>
                         <a href="https://findthislocal.org/" target="_blank">View Project</a>
@@ -241,42 +218,57 @@
 
     <!-- Contact Section -->
     <section id="contact" class="section" data-aos="fade-up" data-aos-duration="1500">
-        <div class="container">
-            <h2 class="title has-text-centered">Contact</h2>
-            <p class="subtitle has-text-centered">Feel free to reach out to me!</p>
-            <div class="columns is-centered">
-                <div class="column is-half">
-                    <a href="https://github.com/Misto0o" target="_blank" class="button is-link is-fullwidth">
-                        <i class="fab fa-github"></i> GitHub
-                    </a>
-                    <form id="contact-form" data-aos="fade-up" data-aos-duration="1600">
-                        <!-- User Name -->
-                        <div class="field">
-                            <label for="name" class="label">Your Name</label>
-                            <input type="text" id="name" name="user_name" placeholder="Your Name" required
-                                class="input is-medium">
-                        </div>
-                        <!-- Email -->
-                        <div class="field">
-                            <label for="email" class="label">Your Email</label>
-                            <input type="email" id="email" name="user_email" placeholder="Your Email" required
-                                class="input is-medium">
-                        </div>
-                        <!-- Message -->
-                        <div class="field">
-                            <label for="message" class="label">Your Message</label>
-                            <textarea id="message" name="message" placeholder="Your Message" required
-                                class="textarea is-medium"></textarea>
-                        </div>
-                        <!-- Submit Button -->
-                        <div class="field">
-                            <button type="submit" id="button" class="button is-primary is-fullwidth">Send Email</button>
-                        </div>
-                    </form>
-                    <p class="has-text-centered">Email: <a href="mailto:misttwist@icloud.com">misttwist@icloud.com</a>
-                    </p>
-                </div>
+        <div class="contact-inner">
+
+            <h2 class="contact-heading">Let's work together.</h2>
+            <p class="contact-sub">Open to freelance projects, collabs, or just a conversation.</p>
+
+            <!-- Social Pills -->
+            <div class="contact-socials">
+                <a class="social-pill" href="https://github.com/Misto0o" target="_blank">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a class="social-pill" href="https://www.linkedin.com/in/kristian-cook-2712862b6/" target="_blank">
+                    <i class="fab fa-linkedin"></i> LinkedIn
+                </a>
+                <a class="social-pill" href="mailto:misttwist@icloud.com">
+                    <i class="fas fa-envelope"></i> misttwist@icloud.com
+                </a>
             </div>
+
+            <div class="contact-divider">or send a message</div>
+
+            <!-- Form Card -->
+            <div class="contact-form-card">
+                <form id="contact-form" data-aos="fade-up" data-aos-duration="1600">
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="user_name" placeholder="Kristian Cook" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="user_email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" placeholder="Write your message here..."
+                            required></textarea>
+                    </div>
+
+                    <button type="submit" id="button" class="contact-submit-btn">
+                        Send Message &nbsp;→
+                    </button>
+                </form>
+            </div>
+
+            <p class="contact-email-note">
+                Prefer email? Reach me directly at <a href="mailto:misttwist@icloud.com">misttwist@icloud.com</a>
+            </p>
+
         </div>
     </section>
 
@@ -303,7 +295,9 @@
     <script type="text/javascript">
         emailjs.init('k-OW5Z5AEgecgKPBy')
     </script>
-    <script src="script.js?v=2"></script>
+
+    <script src="js/header.js"></script>
 </body>
+<script src="js/script.js"></script>
 
 </html>

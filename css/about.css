@@ -13,7 +13,7 @@ html {
     /* Prevents double scrollbars */
     font-family: "Playwrite NZ Basic", sans-serif;
     font-optical-sizing: auto;
-    font-weight: 400;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -27,68 +27,6 @@ body {
     color: #c9d1d9;
     line-height: 1.6;
     text-align: center;
-}
-
-/* Header and Navigation */
-header.navbar {
-    display: flex;
-    background-color: #161b22;
-    padding: 15px 0;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-    gap: 2rem;
-    align-items: center;
-}
-
-header h1 {
-    font-size: 1.8rem;
-    color: #fff;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    text-align: center;
-    font-weight: bold;
-}
-
-.navbar a {
-    color: white;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    padding: 10px 20px;
-    position: relative;
-    transition: all 0.3s ease;
-    text-align: center;
-}
-
-.navbar a::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: 2px;
-    background: #003cff;
-    transform: scaleX(0);
-    transform-origin: bottom right;
-    transition: transform 0.3s ease;
-}
-
-.navbar a:hover::before {
-    transform: scaleX(1);
-    transform-origin: bottom left;
-}
-
-.navbar-item:hover {
-    color: #0033ff !important;
-}
-
-.navbar-item {
-    color: white !important;
-}
-
-.navbar-burger {
-    color: white !important;
 }
 
 /* About Section */
@@ -105,9 +43,9 @@ header h1 {
 
 .about-section h1.title {
     font-size: 2.8rem;
-    color: #58a6ff;
+    color: #3498db;
     margin-bottom: 25px;
-    font-weight: bold;
+    font-weight: 600;
     letter-spacing: 1.2px;
     position: relative;
 }
@@ -117,7 +55,7 @@ header h1 {
     display: block;
     width: 60px;
     height: 5px;
-    background: #58a6ff;
+    background: #3498db;
     margin: 20px auto;
 }
 
@@ -208,7 +146,7 @@ header h1 {
 /* Hover effect for skill icons */
 .skill:hover i,
 .skill:hover .skill-icon {
-    color: #1f6feb;
+    color: #3498db;
     /* Darker shade on hover */
     transform: scale(1.2);
 }
@@ -320,7 +258,7 @@ footer {
 
 .testimonials-section h2 {
     font-size: 2rem;
-    color: #58a6ff;
+    color: #3498db;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -347,7 +285,7 @@ footer {
 
 .portfolio-section h2 {
     font-size: 2rem;
-    color: #58a6ff;
+    color: #3498db;
     margin-bottom: 20px;
 }
 
@@ -372,16 +310,16 @@ footer {
 
 .certifications-section h2 {
     font-size: 2.5rem;
-    color: #58a6ff;
+    color: #3498db;
     margin-bottom: 20px;
-    font-weight: bold;
+    font-weight: 500;
     letter-spacing: 1.2px;
 }
 
 /* Container for certifications */
 .certifications-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 30px;
     padding: 0 10px;
 }
@@ -391,14 +329,13 @@ footer {
     background-color: #161b22;
     border-radius: 8px;
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
-    padding: 20px;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     margin: 0;
-    /* No margin needed; grid layout handles spacing */
 }
 
 .certification-card:hover {
@@ -407,7 +344,7 @@ footer {
 }
 
 .certification-card img {
-    width: 89%;
+    width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -430,8 +367,8 @@ h2 {
 }
 
 strong {
-    color: blue !important;
-    font-weight: bold !important;
+    color: #3498db !important;
+    font-weight: 600 !important;
     font-size: 1.2rem !important;
 }
 
@@ -439,15 +376,19 @@ strong {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #007bff;
+    background-color: #3498db;
     color: white;
     border: none;
     border-radius: 50%;
-    padding: 10px;
+    width: 50px;
+    height: 50px;
     display: none;
     z-index: 1000;
     font-size: 20px;
     cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .back-to-top i {
@@ -477,14 +418,14 @@ strong {
 
 .interest-card:hover {
     transform: translateY(-6px);
-    border-color: #58a6ff;
+    border-color: #3498db;
     box-shadow: 0 8px 25px rgba(88, 166, 255, 0.15);
     color: #fff;
 }
 
 .interest-card i {
     font-size: 2.5rem;
-    color: #58a6ff;
+    color: #3498db;
 }
 
 .interest-card h3 {

@@ -5,11 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Me | Kristian Cook</title>
-    <!-- Preloading the stylesheet -->
-    <link rel="preload" href="about.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-    <noscript>
-        <link rel="stylesheet" href="about.css?v=3">
-    </noscript>
+    <link rel="stylesheet" href="css/about.css?v=3">
 
     <!-- Other styles -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,29 +30,6 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header class="navbar" id="header">
-        <div class="container">
-            <div class="navbar-brand">
-                <h1 class="navbar-item">Kristian Cook</h1>
-                <button class="navbar-burger" aria-label="Toggle Navigation" onclick="toggleNav()">
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                    <span aria-hidden="true"></span>
-                </button>
-            </div>
-            <div id="nav-links" class="navbar-menu">
-                <div class="navbar-end">
-                    <a class="navbar-item" href="index.html">Home</a>
-                    <a class="navbar-item" href="project.html">Projects</a>
-                    <a class="navbar-item" href="index.html#contact">Contact</a>
-                    <a class="navbar-item" href="resume.html">Resume</a>
-                </div>
-            </div>
-        </div>
-    </header>
-
-
     <!-- Main Container -->
     <div class="main-container">
         <!-- About Me Section -->
@@ -232,7 +205,8 @@
     </footer>
     <!-- Scripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script src="about.js?v=3"></script>
+    <script src="js/about.js?v=3"></script>
+    <script src="js/header.js"></script>
 </body>
 
 </html>
