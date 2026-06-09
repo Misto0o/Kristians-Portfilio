@@ -1,6 +1,6 @@
 /* ============================================
-   STYLES.CSS — Cleaned, no duplicates
-   ============================================ */
+   Core site styles: layout, hero, timeline, contact, and utilities
+   Modify these rules to change site-wide presentation. */
 
 /* General Reset and Body Styling */
 * {
@@ -143,6 +143,8 @@ label {
 }
 
 /* ── GENERAL SECTIONS ──────────────────────── */
+
+/* Utility styles for general sections used across multiple pages */
 .section>* {
     position: relative;
     z-index: 1;
@@ -176,6 +178,8 @@ label {
 }
 
 /* ── TIMELINE ──────────────────────────────── */
+
+/* Center spine */
 #timeline {
     position: relative;
     overflow: hidden;
@@ -311,6 +315,8 @@ label {
 }
 
 /* ── CONTACT SECTION ───────────────────────── */
+
+/* Styles for contact area: social pills, form card, and CTA */
 #contact {
     background: #0d1117;
     position: relative;
@@ -586,12 +592,16 @@ label {
 }
 
 /* ── FOOTER ────────────────────────────────── */
+
+/* Footer layout and typography */
 footer {
     line-height: 2.5 !important;
     color: white !important;
 }
 
 /* ── BACK TO TOP ───────────────────────────── */
+
+/* Back-to-top control appearance and positioning */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -615,6 +625,8 @@ footer {
 }
 
 /* ── KEYFRAMES ─────────────────────────────── */
+
+/* Reusable keyframes for subtle entrance animations */
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -626,6 +638,8 @@ footer {
 }
 
 /* ── MEDIA QUERIES ─────────────────────────── */
+
+/* Responsive overrides for small screens */
 @media (max-width: 768px) {
     #landing {
         background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 140, 255, 0.7)),

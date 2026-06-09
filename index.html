@@ -2,35 +2,35 @@
 <html lang="en">
 
 <head>
-    <!-- Meta Information -->
+    <!-- Page metadata and responsive settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristian Cook | Front-End Developer</title>
     <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Fonts -->
+    <!-- Web fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100&display=swap" rel="stylesheet">
 
-    <!-- CSS Frameworks and Libraries -->
+    <!-- External CSS and icon libraries used site-wide -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
     <link rel="icon" href="PortfilioFaviocn\favicon-32x32.png" type="image/x-icon">
-    <!-- Open Graph meta tags -->
+    <!-- Open Graph meta tags for social previews -->
 
     <meta property="og:title" content="Kristian`s Portfolio" />
     <meta property="og:description" content="Front-End Web Developer" />
     <meta property="og:image" content='PortfilioFaviocn\favicon-32x32.png' />
-    <!-- Replace with actual image URL -->
+    <!-- Image used for social sharing preview -->
     <meta property="og:url" content="https://builtbykristian.netlify.app" />
-    <!-- Replace with actual URL -->
+    <!-- Canonical site URL -->
     <meta property="og:type" content="website" />
 </head>
 
 <body>
-    <!-- Hero Section -->
+    <!-- Hero section introducing the site owner and call-to-action -->
     <section id="landing" class="hero is-fullheight">
         <div class="container">
             <!-- Profile Photo -->
@@ -38,7 +38,7 @@
                 <img src="images/Kristian Cook Pic.jpg" alt="Kristian Cook's Photo">
             </div>
 
-            <!-- Contact Info with Icons -->
+            <!-- Contact Icons and links for quick access to social profiles -->
             <div class="contact-info" data-aos="fade-up" data-aos-duration="1000">
                 <a href="https://github.com/Misto0o" target="_blank" title="GitHub">
                     <i class="fab fa-github"></i>
@@ -51,7 +51,7 @@
                 </a>
             </div>
 
-            <!-- Text Content -->
+            <!-- Primary introduction text and CTA -->
             <h1 class="title is-1" data-aos="fade-up" data-aos-duration="1000">Hello, I'm <span
                     class="highlight">Kristian Cook</span></h1>
             <p class="subtitle" data-aos="fade-up" data-aos-duration="1200">Freelance Front-End Developer</p>
@@ -73,7 +73,7 @@
         </div>
     </section>
 
-    <!-- Timeline Section -->
+    <!-- Timeline: chronological highlights of projects and experience -->
     <section id="timeline" class="section" data-aos="fade-right">
         <div class="container">
             <h2 class="title has-text-centered">My Coding Journey</h2>
@@ -192,38 +192,49 @@
                         <h4>Freelance Client – FindThisLocal</h4>
                         <p class="timeline-text">
                             Contracted by an SEO Scholars mentor to build a minority-owned business discovery platform.
-                            Used Google Places and Yelp APIs with React, HTML, and CSS to display and filter local
+                            Used Google Places and Google Maps APIs with JS, HTML, and CSS to display and filter local
                             businesses.
                             Implemented Firebase for user submissions, allowing businesses that are not listed on
-                            Google/Yelp to
+                            Google Maps API to
                             be added.
                         </p>
                         <a href="https://findthislocal.org/" target="_blank">View Project</a>
                     </div>
                 </div>
-                <!-- Royal House -->
+                <!-- HoopPortal -->
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <h3>Jan 18th 2026 – Present</h3>
-                        <h4>Royal House of Care</h4>
+                        <h3>May 2026</h3>
+                        <h4>HoopPortal</h4>
                         <p class="timeline-text">
-                            Redesigning the Royal House of Care platform to improve accessibility, clarity, and
-                            navigation for individuals with special needs and their families.
+                            Developed a subscription-based basketball recruiting platform enabling coaches to discover athletes by location, graduation year, and position. Integrated Stripe billing, Supabase authentication, and premium profile ranking for a seamless talent scouting experience.
                         </p>
+                        <a href="https://hoopportal.com" target="_blank">View Project</a>
+                    </div>
+                </div>
+                <!-- SafeWord -->
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>June 2026</h3>
+                        <h4>SafeWord</h4>
+                        <p class="timeline-text">
+                            Built a digital Progressive Web App (PWA) version of a Taboo-style safety training game for the Global Director of Safety at Starbucks. Features offline support, team scoring, configurable rounds, and pass-the-device gameplay.
+                        </p>
+                        <a href="https://safeword-game.vercel.app" target="_blank">Play Now</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
+    <!-- Contact section with social links and a contact form -->
     <section id="contact" class="section" data-aos="fade-up" data-aos-duration="1500">
         <div class="contact-inner">
 
             <h2 class="contact-heading">Let's work together.</h2>
             <p class="contact-sub">Open to freelance projects, collabs, or just a conversation.</p>
 
-            <!-- Social Pills -->
+            <!-- Social quick-links for outreach -->
             <div class="contact-socials">
                 <a class="social-pill" href="https://github.com/Misto0o" target="_blank">
                     <i class="fab fa-github"></i> GitHub
@@ -238,7 +249,7 @@
 
             <div class="contact-divider">or send a message</div>
 
-            <!-- Form Card -->
+            <!-- Contact form card used by EmailJS -->
             <div class="contact-form-card">
                 <form id="contact-form" data-aos="fade-up" data-aos-duration="1600">
 
@@ -281,7 +292,7 @@
         <p>© <span id="year"></span> Kristian Cook</p>
     </footer>
 
-    <!-- JavaScript -->
+    <!-- JavaScript libraries and initialization -->
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script>

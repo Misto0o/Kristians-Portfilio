@@ -1,4 +1,4 @@
-// Wrap the fetch logic in the actual function
+// Load the shared header fragment and insert it at the top of the document
 function loadHeader() {
     fetch('extras/header.html')
         .then(response => response.text())
@@ -8,6 +8,7 @@ function loadHeader() {
         });
 }
 
+// Add an "active" class to the matching nav link for the current page
 function highlightCurrentPage() {
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const navLinks = document.querySelectorAll('a.navbar-item');
@@ -21,9 +22,10 @@ function highlightCurrentPage() {
     });
 }
 
-// Now this works because loadHeader actually exists
+// Initialize header once the DOM is parsed so shared navigation is available to scripts
 document.addEventListener('DOMContentLoaded', loadHeader);
 
+// Toggle navigation menu visibility for small screens
 function toggleNav() {
     const navMenu = document.getElementById('nav-links');
     if (navMenu) {

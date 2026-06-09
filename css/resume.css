@@ -1,13 +1,13 @@
-/* General Reset and Body Styling */
+/* Base reset and consistent typography across resume page */
 * {
     box-sizing: border-box;
     font-family: "Playwrite NZ Basic", sans-serif;
 }
 
-/* Global Styles */
+/* Page palette and typography for the resume view */
 body {
     background-color: #0d1117;
-    /* Dark background */
+    /* Dark theme to match sitewide styles */
     color: #c9d1d9;
     line-height: 1.6;
     text-align: center;
@@ -17,13 +17,13 @@ body {
     font-style: normal;
 }
 
-/* Resume Section */
+/* Content container for the resume download and embedded view */
 .resume-link,
 .google-docs-embed {
     margin: 30px auto;
     padding: 30px;
     background-color: #1c1f26 !important;
-    /* Dark background */
+    /* Dark container background to separate the embedded document */
     border-radius: 12px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     max-width: 900px;
@@ -52,7 +52,7 @@ body {
     background-color: #3498db;
 }
 
-/* Embedded Google Doc (Resume) */
+/* Styling for the embedded Google Doc viewer */
 iframe {
     width: 100%;
     height: 700px;
@@ -62,7 +62,7 @@ iframe {
     margin-top: 20px;
 }
 
-/* Back to Top Button */
+/* Back-to-top control used on long resume pages */
 .back-to-top {
     position: fixed;
     bottom: 20px;
@@ -86,7 +86,7 @@ iframe {
     background-color: #0056b3;
 }
 
-/* Footer */
+/* Footer block for consistent site-wide appearance */
 footer {
     background-color: #161b22 !important;
     padding: 20px;
@@ -95,26 +95,26 @@ footer {
     line-height: 2.5 !important;
 }
 
-/* Styling for the Resume Page */
+/* Headline styles unique to the resume page */
 .title {
     color: #ffffff !important;
-    /* Makes the text white */
+    /* Primary headline color for readability */
     font-size: 2rem;
-    /* Adjust size if needed */
+    /* Scale appropriately for the resume layout */
     margin-bottom: 10px;
 }
 
 .subtitle {
     color: #ffffff !important;
-    /* Makes the text white */
+    /* Secondary headline color */
     font-size: 1.2rem;
-    /* Adjust size if needed */
+    /* Use slightly smaller size for body context */
     margin-bottom: 20px;
     line-height: 1.6;
     /* Improve readability */
 }
 
-/* Mobile Devices (Max Width: 768px) */
+/* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
     .navbar {
         flex-direction: column;

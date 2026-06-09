@@ -1,4 +1,4 @@
-const CACHE_NAME = 'portfolio-cache-v3';  // 🔁 Update this on every deploy
+const CACHE_NAME = 'portfolio-cache-v3';  // Update this string when assets change to bust the cache
 
 const ASSETS_TO_CACHE = [
   '/',
@@ -19,16 +19,17 @@ const ASSETS_TO_CACHE = [
     'PortfilioFaviocn'
 ];
 
-// Install: cache core files
+// During installation, pre-cache the application shell so the site can load offline
 self.addEventListener('install', (event) => {
   console.log('[SW] Installing & caching shell…');
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS_TO_CACHE))
   );
-  self.skipWaiting(); // ⚡ Activate immediately
+  // Immediately move to the activate phase so the new worker takes control
+  self.skipWaiting();
 });
 
-// Activate: nuke all old caches
+// On activation, remove any old caches that don't match the current CACHE_NAME
 self.addEventListener('activate', (event) => {
   console.log('[SW] Activating & cleaning old caches…');
   event.waitUntil(
@@ -39,11 +40,11 @@ self.addEventListener('activate', (event) => {
           return caches.delete(key);
         }
       }))
-    ).then(() => self.clients.claim()) // ⚡ Take control
+    ).then(() => self.clients.claim()) // Ensure the service worker controls uncontrolled clients
   );
 });
 
-// Fetch: cache-first with background update
+// Fetch handler implements a cache-first strategy with a background network update
 self.addEventListener('fetch', (event) => {
   if (event.request.method !== 'GET') return;
 
@@ -56,7 +57,7 @@ self.addEventListener('fetch', (event) => {
           return networkRes;
         }).catch(() => {});
 
-      // Serve cached, update in background
+      // Return cached response if available immediately; otherwise wait for network
       return cached || fetchPromise;
     })
   );

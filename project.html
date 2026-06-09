@@ -10,24 +10,24 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100&display=swap" rel="stylesheet">
 
-  <!-- CSS Frameworks and Libraries -->
+  <!-- External CSS and icon libraries used by the projects page -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
   <link rel="icon" href="PortfilioFaviocn\favicon-32x32.png" type="image/x-icon">
-  <!-- Open Graph meta tags -->
+  <!-- Open Graph meta tags for social previews -->
 
   <meta property="og:title" content="Kristian`s Portfolio" />
   <meta property="og:description" content="Front-End Web Developer" />
   <meta property="og:image" content='PortfilioFaviocn\favicon-32x32.png' />
-  <!-- Replace with actual image URL -->
+  <!-- Image used for social sharing preview -->
   <meta property="og:url" content="https://builtbykristian.netlify.app" />
-  <!-- Replace with actual URL -->
+  <!-- Canonical site URL -->
   <meta property="og:type" content="website" />
 </head>
 
 <body>
-  <!-- Projects Section -->
+  <!-- Projects listing: grid of project cards with links to demos and repositories -->
   <section id="projects" class="projects-section">
     <div class="container">
       <h2 class="section-title" data-aos="fade-up" data-aos-duration="800">My Projects</h2>
@@ -44,10 +44,7 @@
           <div class="card-content">
             <div class="project-info">
               <h3 class="title">Mist.AI</h3>
-              <p>A full-scale AI assistant platform supporting multi-model inference across Gemini, Mistral, and Cohere.
-                Features real-time web search, session memory, chat threads, file + image understanding, 12 custom
-                themes, PWA support, and a browser extension for Chrome and Firefox. V10 marks the final web release —
-                the largest codebase I've ever built at 9,000+ lines.</p>
+              <p>A full-scale AI assistant platform supporting multi-model inference across Gemini, Mistral, and Cohere. Features real-time web search, session memory, chat threads, file + image understanding, 12 custom themes, PWA support, and a browser extension for Chrome and Firefox. V10 marks the final web release — the largest codebase I've ever built at 9,000+ lines.</p>
               <div class="project-technologies">
                 <span class="tech-tag">Python</span>
                 <span class="tech-tag">Flask</span>
@@ -70,178 +67,65 @@
           </div>
         </div>
 
-        <!-- 2. ECG Robotics / Triple Paradox FTC 6183 -->
+        <!-- 2. HoopPortal -->
         <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="150">
           <div class="card-image">
-            <img src="images/ecgrobotics.png" alt="ECG Robotics FTC 6183" class="project-image">
+            <img src="images/hoopportal.png" alt="HoopPortal" class="project-image">
             <div class="card-overlay"></div>
           </div>
           <div class="card-content">
             <div class="project-info">
-              <h3 class="title">ECG Robotics – FTC 6183</h3>
-              <p>Multi-contributor team website built with Vue, React, and Yarn. Learned real-world Git workflows —
-                branching, pull requests, and code reviews.</p>
+              <h3 class="title">HoopPortal</h3>
+              <p>Developed a subscription-based basketball recruiting platform that enables coaches to discover athletes by location, graduation year, and position. Integrated Stripe billing, Supabase authentication, and premium profile ranking to create a seamless talent scouting experience.</p>
               <div class="project-technologies">
-                <span class="tech-tag">Vue</span>
                 <span class="tech-tag">React</span>
-                <span class="tech-tag">Yarn</span>
-                <span class="tech-tag">Git</span>
+                <span class="tech-tag">Supabase</span>
+                <span class="tech-tag">Stripe</span>
+                <span class="tech-tag">JavaScript</span>
               </div>
             </div>
             <div class="project-links">
-              <a href="https://www.ecgrobotics.org/ftc6183" target="_blank" class="project-link">
+              <a href="https://hoopportal.com" target="_blank" class="project-link">
                 <i class="fas fa-external-link-alt"></i> Live Site
               </a>
-              <a href="https://github.com/kevalshah2005/ecgrobotics.org" target="_blank" class="github-link">
+              <a href="https://github.com/Misto0o/HoopPortal" target="_blank" class="github-link">
                 <i class="fab fa-github"></i> GitHub
               </a>
             </div>
           </div>
         </div>
 
-        <!-- 3. Kearns Robotics -->
+        <!-- 3. SafeWord -->
         <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
           <div class="card-image">
-            <img src="images/KearnsRobotics.png" alt="Kearns Robotics" class="project-image">
+            <img src="images/safeword.png" alt="SafeWord" class="project-image">
             <div class="card-overlay"></div>
           </div>
           <div class="card-content">
             <div class="project-info">
-              <h3 class="title">Kearns Robotics</h3>
-              <p>Team website for FTC 2184 Kearns Robotics. Helped the team win 1st Place Connect Award for community
-                outreach.
-              </p>
+              <h3 class="title">SafeWord</h3>
+              <p>Built a digital Progressive Web App (PWA) version of a Taboo-style safety training game for the Global Director of Safety at Starbucks. Players race against the clock to get teammates to guess safety-related terms without saying forbidden words. Features offline support, team scoring, configurable rounds, and pass-the-device gameplay.</p>
               <div class="project-technologies">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Bulma CSS</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Vite</span>
+                <span class="tech-tag">PWA</span>
+                <span class="tech-tag">Service Worker</span>
+                <span class="tech-tag">CSS Variables</span>
               </div>
             </div>
             <div class="project-links">
-              <a href="https://kearnsrobotics.netlify.app" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Site
+              <a href="https://safewordapp.netlify.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Play Now
               </a>
-              <a href="https://github.com/Misto0o/KearnsRobotics" target="_blank" class="github-link">
+              <a href="https://github.com/Misto0o/Digital-Taboo" target="_blank" class="github-link">
                 <i class="fab fa-github"></i> GitHub
               </a>
             </div>
           </div>
         </div>
 
-        <!-- 4. Manga Search / CS50 Chrome Extension -->
+        <!-- 4. FindThisLocal -->
         <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="250">
-          <div class="card-image">
-            <img src="images/Anime Search.png" alt="Manga Search" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">Manga Search</h3>
-              <p>A Chrome extension built as my CS50X final project. Search anime and manga by name to get detailed info
-                on episodes, ratings, and reviews — powered by live API data.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">MangaAPI</span>
-                <span class="tech-tag">CSS3</span>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://mangaanimesearch.netlify.app/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="https://github.com/Misto0o/CS50X-Chrome-Extention" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 5. Google Maps Clone -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
-          <div class="card-image">
-            <img src="images/GoogleMaps.png" alt="Google Maps Clone" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">Google Maps Clone</h3>
-              <p>A functional maps application with navigation features, location search, and custom styling — built
-                with Three.js for globe integration and MapBox API for interactive mapping.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">MapBox API</span>
-                <span class="tech-tag">Three.JS</span>
-                <span class="tech-tag">Geolocation</span>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://mistmapsclone.netlify.app/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="https://github.com/Misto0o/GoogleMapsClone" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 6. Just Code Bruh - Kingston's Coding Camp -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="350">
-          <div class="card-image">
-            <img src="images/justCodeBruh.png" alt="Just Code Bruh" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">Just Code Bruh</h3>
-              <p>Paid freelance site for a friend's youth coding camp teaching Python, Java, and Code.org.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Bulma CSS</span>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://justcodebruh.netlify.app" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Site
-              </a>
-              <a href="https://github.com/Misto0o/JustCodeBruh" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 7. DSEC Security -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="400">
-          <div class="card-image">
-            <img src="images/dsecsecurity.png" alt="DSEC Security" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">DSEC Security</h3>
-              <p>Freelance project — rebuilt and modernized a local Greensboro security company's website. Redesigned
-                the full UI, improved mobile responsiveness, migrated to a production domain, and integrated Fillout
-                forms with webhooks to route client submissions directly to email.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Bulma CSS</span>
-                <span class="tech-tag">Fillout</span>
-                <span class="tech-tag">Webhooks</span>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://dsecsecurity.netlify.app/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Site
-              </a>
-              <a href="https://github.com/Misto0o/D-Sec-Secuirty-INC" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 8. FindThisLocal -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="450">
           <div class="card-image">
             <img src="images/findthislocal.png" alt="FindThisLocal" class="project-image">
             <div class="card-overlay"></div>
@@ -249,9 +133,7 @@
           <div class="card-content">
             <div class="project-info">
               <h3 class="title">FindThisLocal</h3>
-              <p>Freelance project — contracted by an SEO Scholars mentor to build a minority-owned business discovery
-                platform. Integrated Google Places and Yelp APIs to display and filter local businesses, with Firebase
-                allowing unlisted businesses to self-submit and appear on the platform.</p>
+              <p>Freelance project — contracted by an SEO Scholars mentor to build a minority-owned business discovery platform. Integrated Google Places and Yelp APIs to display and filter local businesses, with Firebase allowing unlisted businesses to self-submit and appear on the platform.</p>
               <div class="project-technologies">
                 <span class="tech-tag">React</span>
                 <span class="tech-tag">Firebase</span>
@@ -270,113 +152,63 @@
           </div>
         </div>
 
-        <!-- 9. Royal House of Care -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="500">
+        <!-- 5. DSEC Security -->
+        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
           <div class="card-image">
-            <img src="images/royalhouseofcare.png" alt="Royal House of Care" class="project-image">
+            <img src="images/dsecsecurity.png" alt="DSEC Security" class="project-image">
             <div class="card-overlay"></div>
           </div>
           <div class="card-content">
             <div class="project-info">
-              <h3 class="title">Royal House of Care</h3>
-              <p>Ongoing freelance project — redesigning the Royal House of Care platform to improve accessibility,
-                clarity, and navigation for individuals with special needs and their families.</p>
+              <h3 class="title">DSEC Security INC</h3>
+              <p>Freelance project for a local security firm. Built a professional landing page with integrated email contact forms, service showcases, and client testimonials.</p>
               <div class="project-technologies">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Bulma CSS</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Tailwind CSS</span>
+                <span class="tech-tag">Fillout</span>
+                <span class="tech-tag">Webhooks</span>
               </div>
             </div>
             <div class="project-links">
-              <a href="#" class="project-link" style="opacity: 0.5; pointer-events: none;">
-                <i class="fas fa-clock"></i> In Progress
+              <a href="https://dsecsecurity.netlify.app/" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Site
               </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- 10. Film Pilot -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="550">
-          <div class="card-image">
-            <img src="images/filmpilot.png" alt="Film Pilot" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">Film Pilot</h3>
-              <p>A dark-themed movie discovery app using the TMDb API to browse, filter, favorite, and watch trailers.
-              </p>
-              <div class="project-technologies">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">TMDb API</span>
-                <span class="tech-tag">Bulma CSS</span>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://filmpilot.netlify.app/index.html" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="https://github.com/Misto0o/FlimPilot" target="_blank" class="github-link">
+              <a href="https://github.com/Misto0o/D-Sec-Secuirty-INC" target="_blank" class="github-link">
                 <i class="fab fa-github"></i> GitHub
               </a>
             </div>
           </div>
         </div>
 
-        <!-- 11. Weather App -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="600">
+        <!-- 6. ECG Robotics / Triple Paradox FTC 6183 -->
+        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="350">
           <div class="card-image">
-            <img src="images/weatherapp.png" alt="Weather App" class="project-image">
+            <img src="images/ecgrobotics.png" alt="ECG Robotics FTC 6183" class="project-image">
             <div class="card-overlay"></div>
           </div>
           <div class="card-content">
             <div class="project-info">
-              <h3 class="title">Weather App</h3>
-              <p>A responsive weather app with real-time forecasts, location-based updates, and interactive maps.</p>
+              <h3 class="title">ECG Robotics – FTC 6183</h3>
+              <p>Multi-contributor team website built with Vue, React, and Yarn. Learned real-world Git workflows — branching, pull requests, and code reviews.</p>
               <div class="project-technologies">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">OpenWeather API</span>
-                <span class="tech-tag">Bulma CSS</span>
+                <span class="tech-tag">Vue</span>
+                <span class="tech-tag">React</span>
+                <span class="tech-tag">Yarn</span>
+                <span class="tech-tag">Git</span>
               </div>
             </div>
             <div class="project-links">
-              <a href="https://mistweatherapp.netlify.app/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
+              <a href="https://www.ecgrobotics.org/ftc6183" target="_blank" class="project-link">
+                <i class="fas fa-external-link-alt"></i> Live Site
               </a>
-              <a href="https://github.com/Misto0o/WeatherApp" target="_blank" class="github-link">
+              <a href="https://github.com/kevalshah2005/ecgrobotics.org" target="_blank" class="github-link">
                 <i class="fab fa-github"></i> GitHub
               </a>
             </div>
           </div>
         </div>
 
-        <!-- 12. PBM-EVCars -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="650">
-          <div class="card-image">
-            <img src="images/EVs.png" alt="PBM-EVCars" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
-          <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">PBM-EVCars</h3>
-              <p>An electric vehicle info platform with specs, model comparisons, and charging infrastructure data.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Bulma CSS</span>
-                <span class="tech-tag">Three.JS</span>
-              </div>
-            </div>
-            <div class="project-links">
-              <a href="https://futurechargedev.netlify.app/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="https://github.com/Misto0o/PBM-EVCars" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Add more project cards HERE! -->
+        <!-- Tier 1 Projects Complete -->
 
       </div>
     </div>

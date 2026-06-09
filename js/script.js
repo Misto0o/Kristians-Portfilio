@@ -1,15 +1,14 @@
-// Toggle the navigation menu
+// Navigation toggle: manage mobile menu state for accessibility and UX
 function toggleNav() {
     const navLinks = document.getElementById('nav-links');
     const menuToggle = document.querySelector('.navbar-burger');
 
-    // Toggle the 'is-active' class to open/close the menu
+    // Toggle the 'is-active' class to show or hide the navigation menu on small screens
     navLinks.classList.toggle('is-active');
     menuToggle.classList.toggle('is-active');
 }
 
-
-// Smooth scroll for links
+// Smooth scrolling for in-page anchor links — improves navigation and preserves history behavior
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -20,6 +19,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Animated decorative dots overlay: creates a subtle animated background for a section
 function addAnimatedDots(sectionId) {
     const section = document.getElementById(sectionId);
     const canvas = document.createElement('canvas');
@@ -73,11 +73,12 @@ function addAnimatedDots(sectionId) {
     window.addEventListener('resize', () => { resize(); initDots(); });
 }
 
+// Apply subtle animated dot overlays to timeline and contact sections for visual depth
 addAnimatedDots('timeline');
 addAnimatedDots('contact');
 
 
-// Back to Top Button functionality
+// Back-to-top: reveal button after scrolling threshold and animate scroll to top when clicked
 const backToTopButton = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
     backToTopButton.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
@@ -86,52 +87,54 @@ backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Call animations on page load (AOS Init)
+// Ensure AOS attaches animations after DOM content is ready
 document.addEventListener("DOMContentLoaded", () => {
-    AOS.init(); // Initialize AOS (animation on scroll)
+    AOS.init(); // Attach AOS animations
 });
 
-// Function to adjust layout based on screen size
+// Responsive helper: sets navigation layout depending on viewport width
 function checkScreenSize() {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const navLinks = document.querySelector(".navbar-menu");
 
-    // Adjust layout styles based on screen width
+    // Use column layout on narrow viewports to preserve readable navigation
     navLinks.style.flexDirection = isMobile ? "column" : "row";
 }
 
-// Call the function on page load and on window resize
+// Run responsive adjustments on load and when the window resizes
 window.addEventListener("load", checkScreenSize);
 window.addEventListener("resize", checkScreenSize);
 
+// Adjust scroll behavior for performance on small devices
 if (window.innerWidth <= 768) {
-    // Disable or adjust smooth scrolling on mobile for better performance
-    document.documentElement.style.scrollBehavior = 'auto'; // Reset smooth scrolling if needed
+    document.documentElement.style.scrollBehavior = 'auto';
 } else {
     document.documentElement.style.scrollBehavior = 'smooth';
 }
 
-emailjs.init('k-OW5Z5AEgecgKPBy'); // Replace with your actual EmailJS user ID
+emailjs.init('k-OW5Z5AEgecgKPBy'); // Initialize EmailJS with the public key
 
+// Contact form: prevent default submission, show progress state, and send via EmailJS
 const btn = document.getElementById('button');
 document.getElementById('contact-form').addEventListener('submit', function (event) {
-    event.preventDefault();  // Prevents the form from submitting traditionally
+    event.preventDefault();  // Prevent default form submission
 
-    btn.value = 'Sending...';  // Change button text to indicate sending
+    btn.value = 'Sending...';  // Provide immediate feedback to the user
 
-    const serviceID = 'service_g2d5g4e';  // Replace with your EmailJS service ID
-    const templateID = 'template_5o8v3ko';  // Replace with your EmailJS template ID
+    const serviceID = 'service_g2d5g4e';  // EmailJS service identifier
+    const templateID = 'template_5o8v3ko';  // EmailJS template identifier
 
-    emailjs.sendForm(serviceID, templateID, this)  // Send the form data to EmailJS
+    emailjs.sendForm(serviceID, templateID, this)
         .then(() => {
-            btn.value = 'Send Email';  // Reset button text on success
-            alert('Sent!');  // Alert on success
+            btn.value = 'Send Email';  // Restore button label on success
+            alert('Sent!');  // Notify user of success
             document.getElementById('contact-form').reset();
         }, (err) => {
-            btn.value = 'Send Email';  // Reset button text on error
-            console.error('Error details:', err);  // Log error details for debugging
+            btn.value = 'Send Email';  // Restore button label on failure
+            console.error('Error details:', err);  // Log error for debugging
             alert('Something went wrong. Please try again later.');
         });
 });
 
+// Update footer year dynamically
 document.getElementById("year").textContent = new Date().getFullYear();

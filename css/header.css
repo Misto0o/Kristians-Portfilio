@@ -1,4 +1,6 @@
-/* ── HEADER & NAVIGATION ───────────────────── */
+/* Header & Navigation: controls site-branding, nav layout and responsive behavior */
+
+/* Navbar container and default alignment */
 header.navbar {
     display: flex;
     background-color: #161b22;
@@ -17,6 +19,7 @@ header h1 {
     font-weight: 400;
 }
 
+/* Brand and burger button styling for mobile */
 .navbar a {
     color: white;
     font-size: 1rem;
@@ -60,6 +63,7 @@ header h1 {
     color: white !important;
 }
 
+/* Navigation menu styles and active link state */
 .no-link-style {
     text-decoration: none;
     color: inherit;
@@ -72,3 +76,5 @@ header h1 {
 .navbar-item.active {
     color: #3498db !important;
 }
+
+/* Responsive adjustments for nav layout on small screens */

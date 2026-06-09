@@ -1,20 +1,21 @@
-// Toggle the navigation menu
+// Navigation toggle: manage the mobile menu state for accessibility and UX
 const birthDate = new Date("2008-04-02T00:00:00Z");
 
 function toggleNav() {
     const navLinks = document.getElementById('nav-links');
     const menuToggle = document.querySelector('.navbar-burger');
 
-    // Toggle the 'is-active' class to open/close the menu
+    // Toggle the 'is-active' class to show or hide the navigation menu on small screens
     navLinks.classList.toggle('is-active');
     menuToggle.classList.toggle('is-active');
 }
 
+// Initialize AOS (Animate On Scroll) with a sensible default duration for entrance animations
 AOS.init({
     duration: 1000,
 });
 
-// Smooth scroll for links
+// Smooth scrolling for in-page anchor links — improves navigation and preserves history behavior
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -25,41 +26,43 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
+// Live age display: compute and update age in years and fractional months
 function updateLiveAge() {
-    const birthDate = new Date("2010-04-02T00:00:00Z"); // Your birthday
+    const birthDate = new Date("2010-04-02T00:00:00Z");
     const now = new Date();
 
     const diffMs = now - birthDate;
 
-    const msPerYear = 1000 * 60 * 60 * 24 * 365.2425;
+    const msPerYear = 1000 * 60 * 60 * 24 * 365.2425; // average Gregorian year
     const msPerMonth = msPerYear / 12;
 
     const years = Math.floor(diffMs / msPerYear);
     const monthsDecimal = (diffMs % msPerYear) / msPerMonth;
 
-    // Show years and months with 2 decimals
+    // Present age as whole years plus months with two decimals for clarity
     const displayText = `${years} years and ${monthsDecimal.toFixed(2)} months`;
 
     document.getElementById("live-age").textContent = displayText;
 }
 
+// Keep the displayed age current
 setInterval(updateLiveAge, 1000);
 updateLiveAge();
 
-// Function to adjust layout based on screen size
+// Adjust layout-related styles depending on viewport width to maintain responsive behavior
 function checkScreenSize() {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const navLinks = document.querySelector(".navbar-menu");
 
-    // Adjust layout styles based on screen width
+    // Use column layout on narrow viewports to preserve readable navigation
     navLinks.style.flexDirection = isMobile ? "column" : "row";
 }
 
-// Call the function on page load and on window resize
+// Run responsive adjustments on load and when the window resizes
 window.addEventListener("load", checkScreenSize);
 window.addEventListener("resize", checkScreenSize);
 
-// Back to Top Button functionality
+// Back-to-top control: show button after scrolling a bit, and animate scrolling to top when clicked
 const backToTopButton = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
     backToTopButton.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
@@ -68,16 +71,17 @@ backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Call animations on page load (AOS Init)
+// Ensure AOS is initialized after the DOM is ready so animations bind to elements correctly
 document.addEventListener("DOMContentLoaded", () => {
-    AOS.init(); // Initialize AOS (animation on scroll)
+    AOS.init(); // Attach entrance animations (AOS)
 });
 
+// Improve mobile performance by disabling smooth scrolling on narrow screens
 if (window.innerWidth <= 768) {
-    // Disable or adjust smooth scrolling on mobile for better performance
-    document.documentElement.style.scrollBehavior = 'auto'; // Reset smooth scrolling if needed
+    document.documentElement.style.scrollBehavior = 'auto';
 } else {
     document.documentElement.style.scrollBehavior = 'smooth';
 }
 
+// Update the year in the footer dynamically
 document.getElementById("year").textContent = new Date().getFullYear();

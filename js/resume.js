@@ -1,15 +1,15 @@
-// Toggle the navigation menu
+// Navigation toggle: manage mobile menu state for accessibility and UX
 function toggleNav() {
     const navLinks = document.getElementById('nav-links');
     const menuToggle = document.querySelector('.navbar-burger');
 
-    // Toggle the 'is-active' class to open/close the menu
+    // Toggle the 'is-active' class to show or hide the navigation menu on small screens
     navLinks.classList.toggle('is-active');
     menuToggle.classList.toggle('is-active');
 }
 
 
-// Smooth scroll for links
+// Smooth scrolling for in-page anchor links — improves navigation and preserves history behavior
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -21,7 +21,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 
-// Back to Top Button functionality
+// Back-to-top: reveal button after scrolling threshold and animate scroll to top when clicked
 const backToTopButton = document.getElementById("backToTop");
 window.addEventListener("scroll", () => {
     backToTopButton.style.display = document.documentElement.scrollTop > 100 ? "block" : "none";
@@ -30,29 +30,33 @@ backToTopButton.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// Call animations on page load (AOS Init)
+
+// Ensure AOS attaches animations after DOM content is ready
 document.addEventListener("DOMContentLoaded", () => {
-    AOS.init(); // Initialize AOS (animation on scroll)
+    AOS.init(); // Attach AOS animations
 });
 
-// Function to adjust layout based on screen size
+
+// Responsive helper: sets navigation layout depending on viewport width
 function checkScreenSize() {
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const navLinks = document.querySelector(".navbar-menu");
 
-    // Adjust layout styles based on screen width
+    // Use column layout on narrow viewports to preserve readable navigation
     navLinks.style.flexDirection = isMobile ? "column" : "row";
 }
 
-// Call the function on page load and on window resize
+// Run responsive adjustments on load and resize
 window.addEventListener("load", checkScreenSize);
 window.addEventListener("resize", checkScreenSize);
 
+
+// Adjust scroll behavior for performance on small devices
 if (window.innerWidth <= 768) {
-    // Disable or adjust smooth scrolling on mobile for better performance
-    document.documentElement.style.scrollBehavior = 'auto'; // Reset smooth scrolling if needed
+    document.documentElement.style.scrollBehavior = 'auto';
 } else {
     document.documentElement.style.scrollBehavior = 'smooth';
 }
 
+// Update footer year dynamically
 document.getElementById("year").textContent = new Date().getFullYear();
