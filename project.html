@@ -4,234 +4,258 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projects</title>
-  <link rel="stylesheet" href="css/project.css?v=3">
+  <title>Projects | Kristian Cook</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100&display=swap" rel="stylesheet">
-
-  <!-- External CSS and icon libraries used by the projects page -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-  <link rel="icon" href="PortfilioFaviocn\favicon-32x32.png" type="image/x-icon">
-  <!-- Open Graph meta tags for social previews -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
 
-  <meta property="og:title" content="Kristian`s Portfolio" />
-  <meta property="og:description" content="Front-End Web Developer" />
-  <meta property="og:image" content='PortfilioFaviocn\favicon-32x32.png' />
-  <!-- Image used for social sharing preview -->
-  <meta property="og:url" content="https://builtbykristian.netlify.app" />
-  <!-- Canonical site URL -->
-  <meta property="og:type" content="website" />
+  <!-- Your stylesheets load LAST so they win over Bulma's resets -->
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/project.css">
+
+  <link rel="icon" href="PortfilioFaviocn/favicon-32x32.png" type="image/x-icon">
+
+  <meta property="og:title" content="Kristian Cook — Projects">
+  <meta property="og:description" content="Front-End Web Developer">
+  <meta property="og:image" content="PortfilioFaviocn/favicon-32x32.png">
+  <meta property="og:url" content="https://builtbykristian.netlify.app/projects.html">
+  <meta property="og:type" content="website">
 </head>
 
 <body>
-  <!-- Projects listing: grid of project cards with links to demos and repositories -->
-  <section id="projects" class="projects-section">
-    <div class="container">
-      <h2 class="section-title" data-aos="fade-up" data-aos-duration="800">My Projects</h2>
+
+  <section id="projects-page">
+    <div class="wrap">
+      <p class="section-label">// projects</p>
+      <h1 class="page-title">My Projects</h1>
+
+      <!-- ── THE MIST PROJECT (flagship umbrella) ── -->
+      <div class="umbrella-header">
+        <h2>The Mist Project
+          <span class="info-tip" tabindex="0"
+            data-tooltip="One ecosystem, multiple products — a shared AI core spread across a web chatbot, a desktop agent, and an API. Not separate projects, but different surfaces of the same brain.">
+            <i class="fas fa-circle-info"></i>
+          </span>
+        </h2>
+      </div>
+
+      <div class="flagship-grid">
+
+        <!-- Mist.AI Web -->
+        <article class="project-card flagship">
+          <span class="featured-badge">Flagship</span>
+          <img src="images/mistai.png" alt="Mist.AI Web" class="project-image">
+          <div class="card-content">
+            <h2>Mist.AI Web</h2>
+            <p>The chatbot — a full-scale AI assistant platform supporting multi-model
+              inference across Gemini, Mistral, and Cohere. Real-time web search, session
+              memory, chat threads, file + image understanding, 12 custom themes, PWA
+              support, and a browser extension for Chrome and Firefox. V10 marks the final
+              web release — 9,000+ lines, the largest codebase I've built.</p>
+            <div class="tech-tags">
+              <span>Python</span><span>Flask</span><span>JavaScript</span>
+              <span>Gemini</span><span>Mistral</span><span>Cohere</span>
+              <span>Fly.io</span><span>PWA</span>
+            </div>
+            <div class="card-links">
+              <a href="https://mistai.org" target="_blank" class="link-live">
+                <i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <a href="https://github.com/Misto0o/Mist.AI" target="_blank" class="link-github">
+                <i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Mist.AI Desktop -->
+        <article class="project-card flagship">
+          <span class="featured-badge">Flagship</span>
+          <img src="images/mistai-desktop.png" alt="Mist.AI Desktop" class="project-image">
+          <div class="card-content">
+            <h2>Mist.AI Desktop</h2>
+            <p>The desktop agent — think Claude Code / Cowork, but for your whole PC.
+              JARVIS-style assistant with wake-word activation, real DOM-based browser
+              automation (Playwright, not pixel-guessing), a dependency-graph planner for
+              resumable multi-step tasks, and an executor that verifies every action against
+              ground truth instead of assuming it worked. Full shell access, persistent
+              memory, live caption overlay.</p>
+            <div class="tech-tags">
+              <span>Python</span><span>Playwright</span><span>Cohere Vision</span>
+              <span>MistAI API</span><span>pywebview</span><span>Windows API</span>
+            </div>
+            <div class="card-links">
+              <a href="https://github.com/Misto0o/MistAI-Desktop" target="_blank" class="link-github full-width">
+                <i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+
+      <p class="section-label sub">// more projects</p>
 
       <div class="projects-grid">
 
-        <!-- 1. Mist.AI - FEATURED -->
-        <div class="project-card featured-project" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="100">
-          <span class="featured-badge">Featured</span>
-          <div class="card-image">
-            <img src="images/mistai.png" alt="Mist.AI" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
+        <!-- PlasmaForge -->
+        <article class="project-card">
+          <img src="images/plasmaforge.png" alt="PlasmaForge" class="project-image">
           <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">Mist.AI</h3>
-              <p>A full-scale AI assistant platform supporting multi-model inference across Gemini, Mistral, and Cohere. Features real-time web search, session memory, chat threads, file + image understanding, 12 custom themes, PWA support, and a browser extension for Chrome and Firefox. V10 marks the final web release — the largest codebase I've ever built at 9,000+ lines.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">Python</span>
-                <span class="tech-tag">Flask</span>
-                <span class="tech-tag">JavaScript</span>
-                <span class="tech-tag">Gemini</span>
-                <span class="tech-tag">Mistral</span>
-                <span class="tech-tag">Cohere</span>
-                <span class="tech-tag">Fly.io</span>
-                <span class="tech-tag">PWA</span>
-              </div>
+            <h2>PlasmaForge</h2>
+            <p>A real-time plasma globe simulation you can actually touch — click and hold
+              and lightning bends toward your cursor via an actual Coulomb's-law electric
+              field simulation, not a canned animation. Physics runs in compiled Cython,
+              streamed to a Three.js frontend over WebSocket at 60Hz. Built with a friend.</p>
+            <div class="tech-tags">
+              <span>Python</span><span>Cython</span><span>Three.js</span>
+              <span>WebSocket</span><span>JavaScript</span>
             </div>
-            <div class="project-links">
-              <a href="https://mistai.org" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Demo
-              </a>
-              <a href="https://github.com/Misto0o/Mist.AI" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
+            <div class="card-links">
+              <a href="#" target="_blank" class="link-github full-width">
+                <i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- 2. HoopPortal -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="150">
-          <div class="card-image">
-            <img src="images/hoopportal.png" alt="HoopPortal" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
+        <!-- Remote Desktop Control -->
+        <article class="project-card">
+          <img src="images/remote-desktop.png" alt="Remote Desktop Control" class="project-image">
           <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">HoopPortal</h3>
-              <p>Developed a subscription-based basketball recruiting platform that enables coaches to discover athletes by location, graduation year, and position. Integrated Stripe billing, Supabase authentication, and premium profile ranking to create a seamless talent scouting experience.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Supabase</span>
-                <span class="tech-tag">Stripe</span>
-                <span class="tech-tag">JavaScript</span>
-              </div>
+            <h2>Remote Desktop Control</h2>
+            <p>Control your PC from any device anywhere — no same-WiFi requirement, no port
+              forwarding. Took over a friend's project built on someone else's base and
+              rebuilt it: fixed a connection race condition, added real mobile touch
+              controls and PIN auth, TURN relay for cellular data, and packaged it into a
+              proper signed-feeling Windows installer with a Settings UI and QR pairing.</p>
+            <div class="tech-tags">
+              <span>Electron</span><span>WebRTC</span><span>ngrok</span>
+              <span>robotjs</span><span>Node.js</span>
             </div>
-            <div class="project-links">
-              <a href="https://hoopportal.com" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Site
-              </a>
-              <a href="https://github.com/Misto0o/HoopPortal" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
+            <div class="card-links">
+              <a href="#" target="_blank" class="link-github full-width">
+                <i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- 3. SafeWord -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="200">
-          <div class="card-image">
-            <img src="images/safeword.png" alt="SafeWord" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
+        <!-- HoopPortal -->
+        <article class="project-card">
+          <img src="images/hoopportal.png" alt="HoopPortal" class="project-image">
           <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">SafeWord</h3>
-              <p>Built a digital Progressive Web App (PWA) version of a Taboo-style safety training game for the Global Director of Safety at Starbucks. Players race against the clock to get teammates to guess safety-related terms without saying forbidden words. Features offline support, team scoring, configurable rounds, and pass-the-device gameplay.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Vite</span>
-                <span class="tech-tag">PWA</span>
-                <span class="tech-tag">Service Worker</span>
-                <span class="tech-tag">CSS Variables</span>
-              </div>
+            <h2>HoopPortal</h2>
+            <p>Freelance Project - A subscription-based basketball recruiting platform that lets coaches discover
+              athletes by location, graduation year, and position. Stripe billing, Supabase
+              authentication, and premium profile ranking for a seamless scouting experience. Used by real coaches and
+              scouts.</p>
+            <div class="tech-tags">
+              <span>React</span><span>Supabase</span><span>Stripe</span><span>JavaScript</span>
             </div>
-            <div class="project-links">
-              <a href="https://safewordapp.netlify.app/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Play Now
-              </a>
-              <a href="https://github.com/Misto0o/Digital-Taboo" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
+            <div class="card-links">
+              <a href="https://hoopportal.com" target="_blank" class="link-live">
+                <i class="fas fa-external-link-alt"></i> Live Site</a>
+              <a href="https://github.com/Misto0o/HoopPortal" target="_blank" class="link-github">
+                <i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- 4. FindThisLocal -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="250">
-          <div class="card-image">
-            <img src="images/findthislocal.png" alt="FindThisLocal" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
+        <!-- SafeWord -->
+        <article class="project-card">
+          <img src="images/safeword.png" alt="SafeWord" class="project-image">
           <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">FindThisLocal</h3>
-              <p>Freelance project — contracted by an SEO Scholars mentor to build a minority-owned business discovery platform. Integrated Google Places and Yelp APIs to display and filter local businesses, with Firebase allowing unlisted businesses to self-submit and appear on the platform.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Firebase</span>
-                <span class="tech-tag">Google Places API</span>
-                <span class="tech-tag">Yelp API</span>
-              </div>
+            <h2>SafeWord</h2>
+            <p>Freelance Project - A digital PWA version of a Taboo-style safety training game, built for the
+              Global Director of Safety at Starbucks. Players race the clock to get teammates
+              to guess safety terms without saying forbidden words. Offline support, team
+              scoring, configurable rounds, pass-the-device gameplay.</p>
+            <div class="tech-tags">
+              <span>React</span><span>Vite</span><span>PWA</span>
+              <span>Service Worker</span><span>CSS Variables</span>
             </div>
-            <div class="project-links">
-              <a href="https://findthislocal.org/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Site
-              </a>
-              <a href="https://github.com/Misto0o/FindThisLocal" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
+            <div class="card-links">
+              <a href="https://safewordapp.netlify.app/" target="_blank" class="link-live">
+                <i class="fas fa-external-link-alt"></i> Play Now</a>
+              <a href="https://github.com/Misto0o/Digital-Taboo" target="_blank" class="link-github">
+                <i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- 5. DSEC Security -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="300">
-          <div class="card-image">
-            <img src="images/dsecsecurity.png" alt="DSEC Security" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
+        <!-- FindThisLocal -->
+        <article class="project-card">
+          <img src="images/findthislocal.png" alt="FindThisLocal" class="project-image">
           <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">DSEC Security INC</h3>
-              <p>Freelance project for a local security firm. Built a professional landing page with integrated email contact forms, service showcases, and client testimonials.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Tailwind CSS</span>
-                <span class="tech-tag">Fillout</span>
-                <span class="tech-tag">Webhooks</span>
-              </div>
+            <h2>FindThisLocal</h2>
+            <p>Freelance project — contracted by an SEO Scholars mentor to build a
+              minority-owned business discovery platform. Google Places and Yelp APIs for
+              listing/filtering, with Firebase letting unlisted businesses self-submit.</p>
+            <div class="tech-tags">
+              <span>React</span><span>Firebase</span>
+              <span>Google Places API</span><span>Yelp API</span>
             </div>
-            <div class="project-links">
-              <a href="https://dsecsecurity.netlify.app/" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Site
-              </a>
-              <a href="https://github.com/Misto0o/D-Sec-Secuirty-INC" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
+            <div class="card-links">
+              <a href="https://findthislocal.org/" target="_blank" class="link-live">
+                <i class="fas fa-external-link-alt"></i> Live Site</a>
+              <a href="https://github.com/Misto0o/FindThisLocal" target="_blank" class="link-github">
+                <i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- 6. ECG Robotics / Triple Paradox FTC 6183 -->
-        <div class="project-card" data-aos="flip-left" data-aos-duration="1000" data-aos-delay="350">
-          <div class="card-image">
-            <img src="images/ecgrobotics.png" alt="ECG Robotics FTC 6183" class="project-image">
-            <div class="card-overlay"></div>
-          </div>
+        <!-- DSEC Security -->
+        <article class="project-card">
+          <img src="images/dsecsecurity.png" alt="DSEC Security" class="project-image">
           <div class="card-content">
-            <div class="project-info">
-              <h3 class="title">ECG Robotics – FTC 6183</h3>
-              <p>Multi-contributor team website built with Vue, React, and Yarn. Learned real-world Git workflows — branching, pull requests, and code reviews.</p>
-              <div class="project-technologies">
-                <span class="tech-tag">Vue</span>
-                <span class="tech-tag">React</span>
-                <span class="tech-tag">Yarn</span>
-                <span class="tech-tag">Git</span>
-              </div>
+            <h2>Freelance Project - DSEC Security INC</h2>
+            <p>Freelance project for a local security firm. Professional landing page with
+              integrated email contact forms, service showcases, and client testimonials.</p>
+            <div class="tech-tags">
+              <span>React</span><span>Tailwind CSS</span><span>Fillout</span><span>Webhooks</span>
             </div>
-            <div class="project-links">
-              <a href="https://www.ecgrobotics.org/ftc6183" target="_blank" class="project-link">
-                <i class="fas fa-external-link-alt"></i> Live Site
-              </a>
-              <a href="https://github.com/kevalshah2005/ecgrobotics.org" target="_blank" class="github-link">
-                <i class="fab fa-github"></i> GitHub
-              </a>
+            <div class="card-links">
+              <a href="https://dsecsecurity.netlify.app/" target="_blank" class="link-live">
+                <i class="fas fa-external-link-alt"></i> Live Site</a>
+              <a href="https://github.com/Misto0o/D-Sec-Secuirty-INC" target="_blank" class="link-github">
+                <i class="fab fa-github"></i> GitHub</a>
             </div>
           </div>
-        </div>
+        </article>
 
-        <!-- Tier 1 Projects Complete -->
+        <!-- ECG Robotics / Triple Paradox FTC 6183 -->
+        <article class="project-card">
+          <img src="images/ecgrobotics.png" alt="ECG Robotics FTC 6183" class="project-image">
+          <div class="card-content">
+            <h2>ECG Robotics — FTC 6183</h2>
+            <p>Multi-contributor team website built with Vue, React, and Yarn. Learned
+              real-world Git workflows — branching, pull requests, and code reviews.</p>
+            <div class="tech-tags">
+              <span>Vue</span><span>React</span><span>Yarn</span><span>Git</span>
+            </div>
+            <div class="card-links">
+              <a href="https://www.ecgrobotics.org/ftc6183" target="_blank" class="link-live">
+                <i class="fas fa-external-link-alt"></i> Live Site</a>
+              <a href="https://github.com/kevalshah2005/ecgrobotics.org" target="_blank" class="link-github">
+                <i class="fab fa-github"></i> GitHub</a>
+            </div>
+          </div>
+        </article>
 
       </div>
     </div>
   </section>
-  <!-- Back to Top Button -->
-  <button id="backToTop" class="back-to-top" data-aos="fade-up" data-aos-duration="1500">
-    <i class="fa-solid fa-arrow-up"></i>
-  </button>
+
+  <button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
   <footer>
     <p>© <span id="year"></span> Kristian Cook</p>
   </footer>
 
+  <script src="js/project.js"></script>
+  <script src="js/header.js"></script>
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-<script src="js/project.js?v=3"></script>
-<script src="js/header.js"></script>
-<script>
-  AOS.init(); // Initialize AOS
-  window.addEventListener('load', function () {
-    AOS.init(); // Initialize AOS on load
-    AOS.refresh(); // Refresh AOS to apply animations correctly
-  });
-</script>
 
 </html>

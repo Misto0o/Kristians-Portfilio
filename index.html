@@ -2,313 +2,165 @@
 <html lang="en">
 
 <head>
-    <!-- Page metadata and responsive settings -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kristian Cook | Front-End Developer</title>
-    <link rel="stylesheet" href="css/styles.css">
 
-    <!-- Web fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playwrite+NZ+Basic:wght@100&display=swap" rel="stylesheet">
-
-    <!-- External CSS and icon libraries used site-wide -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
-    <link rel="icon" href="PortfilioFaviocn\favicon-32x32.png" type="image/x-icon">
-    <!-- Open Graph meta tags for social previews -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
 
-    <meta property="og:title" content="Kristian`s Portfolio" />
-    <meta property="og:description" content="Front-End Web Developer" />
-    <meta property="og:image" content='PortfilioFaviocn\favicon-32x32.png' />
-    <!-- Image used for social sharing preview -->
-    <meta property="og:url" content="https://builtbykristian.netlify.app" />
-    <!-- Canonical site URL -->
-    <meta property="og:type" content="website" />
+    <!-- Your stylesheets load LAST so they win over Bulma's resets -->
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/styles.css">
+
+    <link rel="icon" href="PortfilioFaviocn/favicon-32x32.png" type="image/x-icon">
+
+    <meta property="og:title" content="Kristian Cook — Portfolio">
+    <meta property="og:description" content="Front-End Web Developer">
+    <meta property="og:image" content="PortfilioFaviocn/favicon-32x32.png">
+    <meta property="og:url" content="https://builtbykristian.netlify.app">
+    <meta property="og:type" content="website">
 </head>
 
 <body>
-    <!-- Hero section introducing the site owner and call-to-action -->
-    <section id="landing" class="hero is-fullheight">
-        <div class="container">
-            <!-- Profile Photo -->
-            <div class="image-frame" data-aos="zoom-in" data-aos-duration="1000">
-                <img src="images/Kristian Cook Pic.jpg" alt="Kristian Cook's Photo">
+
+    <!-- ── HERO ─────────────────────────────── -->
+    <section id="landing">
+        <div class="hero-inner">
+            <p class="eyebrow"><span class="dot"></span>// available for freelance</p>
+
+            <div class="hero-photo">
+                <img src="images/Kristian Cook Pic.jpg" alt="Kristian Cook">
             </div>
 
-            <!-- Contact Icons and links for quick access to social profiles -->
-            <div class="contact-info" data-aos="fade-up" data-aos-duration="1000">
-                <a href="https://github.com/Misto0o" target="_blank" title="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="mailto:misttwist@icloud.com" title="Email">
-                    <i class="fas fa-envelope"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/kristian-cook-2712862b6/" target="_blank" title="LinkedIn">
-                    <i class="fab fa-linkedin"></i>
-                </a>
+            <h1 class="hero-name">Kristian Cook</h1>
+            <p class="hero-role">Front-End Developer</p>
+
+            <div class="hero-links">
+                <a href="https://github.com/Misto0o" target="_blank" aria-label="GitHub"><i
+                        class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/kristian-cook-2712862b6/" target="_blank" aria-label="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:cookkristian50@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
             </div>
 
-            <!-- Primary introduction text and CTA -->
-            <h1 class="title is-1" data-aos="fade-up" data-aos-duration="1000">Hello, I'm <span
-                    class="highlight">Kristian Cook</span></h1>
-            <p class="subtitle" data-aos="fade-up" data-aos-duration="1200">Freelance Front-End Developer</p>
-            <a href="project.html" class="button is-primary" data-aos="fade-up" data-aos-duration="1400">View
-                Projects</a>
+            <a href="#projects" class="btn-primary">View Projects</a>
         </div>
     </section>
 
-    <section id="about" class="section" data-aos="fade-up">
-        <div class="container">
-            <h2 class="title has-text-centered">Some things about me!</h2>
-            <p class="subtitle has-text-centered">
-                I'm a Sophomore from <i class="fa-solid fa-location-dot"></i> North Carolina who works in Freelance
-                Front-End Web Development using HTML, CSS,
-                JavaScript, and frameworks like React.
-                I love solving problems and building clean websites.
+    <!-- ── ABOUT ────────────────────────────── -->
+    <section id="about">
+        <div class="wrap">
+            <p class="section-label">// about</p>
+            <p class="about-text">
+                I'm a high school developer from North Carolina building real, shipped software —
+                from AI assistants to competition robots. I work mainly in
+                <span class="hl">Python</span>, <span class="hl">HTML/CSS</span>, and
+                <span class="hl">JavaScript / React</span>, and I care more about things working
+                reliably than looking flashy.
             </p>
-            <hr>
         </div>
     </section>
+    <!-- ── PROJECTS ─────────────────────────── -->
+    <section id="projects">
+        <div class="wrap">
+            <p class="section-label">// things ive created</p>
 
-    <!-- Timeline: chronological highlights of projects and experience -->
-    <section id="timeline" class="section" data-aos="fade-right">
-        <div class="container">
-            <h2 class="title has-text-centered">My Coding Journey</h2>
-            <div class="timeline">
+            <div class="project-list">
 
-                <!-- 2017 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2017</h3>
-                        <h4>Started Coding with Minecraft</h4>
-                        <p class="timeline-text">
-                            At the age of 7, I began creating custom Minecraft commands, sparking my interest in
-                            programming.
-                        </p>
+                <article class="project">
+                    <div class="project-head">
+                        <h3>The Mist Project</h3>
+                        <span class="project-date">2024 — Present</span>
                     </div>
-                </div>
+                    <p>One core AI "brain" built into two shipped platforms — a full-scale web assistant
+                        and a JARVIS-style Windows desktop app with real system control.</p>
+                </article>
 
-                <!-- 2022 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2022</h3>
-                        <h4>Developed a Clicker Game</h4>
-                        <p class="timeline-text">
-                            Built my first standalone game project, marking the start of personal development projects.
-                        </p>
+                <article class="project">
+                    <div class="project-head">
+                        <h3>HoopPortal</h3>
+                        <span class="project-date">2026</span>
                     </div>
-                </div>
+                    <p>Subscription basketball recruiting platform with Stripe billing and Supabase auth.</p>
+                </article>
 
-                <!-- Nov 2024 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Nov 9, 2024</h3>
-                        <h4>CS50 Chrome Extension Project</h4>
-                        <p class="timeline-text">
-                            Final project for CS50X certification. Built a Chrome extension using APIs to display manga
-                            and anime data.
-                        </p>
-                        <a href="https://mangaanimesearch.netlify.app/" target="_blank">Explore Project</a>
+                <article class="project">
+                    <div class="project-head">
+                        <h3>SafeWord</h3>
+                        <span class="project-date">2026</span>
                     </div>
-                </div>
+                    <p>A Taboo-style safety training PWA, built for the Global Director of Safety at Starbucks.</p>
+                </article>
 
-                <!-- Dec 2024 Robotics -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Dec 14, 2024</h3>
-                        <h4>Kearns Robotics – 1st Place Connect Award</h4>
-                        <p class="timeline-text">
-                            Member of FTC 2184 Kearns Robotics. Built and maintained the team website and helped win the
-                            Connect Award.
-                        </p>
-                        <a href="https://kearnsrobotics.netlify.app/" target="_blank">View Site</a>
+                <article class="project">
+                    <div class="project-head">
+                        <h3>FTC 6183 — Triple Paradox</h3>
+                        <span class="project-date">2024 — Present</span>
                     </div>
-                </div>
+                    <p>Team Captain and lead programmer. 1st Place, Innovate Award, plus a full offseason
+                        codebase rewrite.</p>
+                </article>
 
-                <!-- Feb 2024 – Feb 2026 -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Feb 8, 2024 – Feb 19, 2026</h3>
-                        <h4>Mist.AI</h4>
-                        <p class="timeline-text">
-                            Launched and Developed Mist.AI, an AI-powered chatbot built with Python Flask
-                            and JavaScript.
-                            Over this period, I implemented 10 major updates, adding new features, UI improvements, and
-                            AI integrations.
-                        </p>
-                        <a href="https://mistai.org" target="_blank">Explore Mist.AI</a>
-                    </div>
-                </div>
-
-                <!-- 2025 Coding Camp -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2025</h3>
-                        <h4>Freelance Client – Kingston Morgan Coding Camp (Friend)</h4>
-                        <p class="timeline-text">
-                            Built a promotional website for my friend’s youth coding camp, teaching Python, Java, and
-                            Code.org.
-                            Completed as a paid project.
-                        </p>
-                        <a href="https://justcodebruh.netlify.app/" target="_blank">View Site</a>
-                    </div>
-                </div>
-
-                <!-- FTC Move -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>2025–2026</h3>
-                        <h4>Triple Paradox / FTC 6183</h4>
-                        <p class="timeline-text">
-                            Transitioned to FTC 6183 and developed the team website using React and Yarn.
-                        </p>
-                        <a href="https://www.ecgrobotics.org/ftc6183" target="_blank">View Site</a>
-                    </div>
-                </div>
-
-                <!-- DSEC -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Apr 2025 – Jan 2026</h3>
-                        <h4>Freelance Client – DSEC Security</h4>
-                        <p class="timeline-text">
-                            Rebuilt and modernized a local security company's website for a Greensboro-based business
-                            owner.
-                            Redesigned UI, improved responsiveness, and migrated to a production domain.
-                            Integrated custom Fillout forms with webhooks to send submissions directly to the client's
-                            email.
-                        </p>
-                        <a href="https://dsecsecurity.netlify.app/" target="_blank">View Site</a>
-                    </div>
-                </div>
-
-                <!-- FindThisLocal -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Nov 24, 2025</h3>
-                        <h4>Freelance Client – FindThisLocal</h4>
-                        <p class="timeline-text">
-                            Contracted by an SEO Scholars mentor to build a minority-owned business discovery platform.
-                            Used Google Places and Google Maps APIs with JS, HTML, and CSS to display and filter local
-                            businesses.
-                            Implemented Firebase for user submissions, allowing businesses that are not listed on
-                            Google Maps API to
-                            be added.
-                        </p>
-                        <a href="https://findthislocal.org/" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <!-- HoopPortal -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>May 2026</h3>
-                        <h4>HoopPortal</h4>
-                        <p class="timeline-text">
-                            Developed a subscription-based basketball recruiting platform enabling coaches to discover athletes by location, graduation year, and position. Integrated Stripe billing, Supabase authentication, and premium profile ranking for a seamless talent scouting experience.
-                        </p>
-                        <a href="https://hoopportal.com" target="_blank">View Project</a>
-                    </div>
-                </div>
-                <!-- SafeWord -->
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>June 2026</h3>
-                        <h4>SafeWord</h4>
-                        <p class="timeline-text">
-                            Built a digital Progressive Web App (PWA) version of a Taboo-style safety training game for the Global Director of Safety at Starbucks. Features offline support, team scoring, configurable rounds, and pass-the-device gameplay.
-                        </p>
-                        <a href="https://safeword-game.vercel.app" target="_blank">Play Now</a>
-                    </div>
-                </div>
             </div>
+
+            <a href="projects.html" class="btn-secondary">View all projects →</a>
         </div>
     </section>
 
-    <!-- Contact section with social links and a contact form -->
-    <section id="contact" class="section" data-aos="fade-up" data-aos-duration="1500">
-        <div class="contact-inner">
-
+    <!-- ── CONTACT ──────────────────────────── -->
+    <section id="contact">
+        <div class="wrap">
+            <p class="section-label">// contact</p>
             <h2 class="contact-heading">Let's work together.</h2>
             <p class="contact-sub">Open to freelance projects, collabs, or just a conversation.</p>
 
-            <!-- Social quick-links for outreach -->
             <div class="contact-socials">
-                <a class="social-pill" href="https://github.com/Misto0o" target="_blank">
-                    <i class="fab fa-github"></i> GitHub
-                </a>
-                <a class="social-pill" href="https://www.linkedin.com/in/kristian-cook-2712862b6/" target="_blank">
-                    <i class="fab fa-linkedin"></i> LinkedIn
-                </a>
-                <a class="social-pill" href="mailto:misttwist@icloud.com">
-                    <i class="fas fa-envelope"></i> misttwist@icloud.com
-                </a>
+                <a class="social-pill" href="https://github.com/Misto0o" target="_blank"><i class="fab fa-github"></i>
+                    GitHub</a>
+                <a class="social-pill" href="https://www.linkedin.com/in/kristian-cook-2712862b6/" target="_blank"><i
+                        class="fab fa-linkedin"></i> LinkedIn</a>
+                <a class="social-pill" href="mailto:cookkristian50@gmail.com"><i class="fas fa-envelope"></i>
+                    cookkristian50@gmail.com</a>
             </div>
 
-            <div class="contact-divider">or send a message</div>
-
-            <!-- Contact form card used by EmailJS -->
             <div class="contact-form-card">
-                <form id="contact-form" data-aos="fade-up" data-aos-duration="1600">
-
+                <form id="contact-form">
                     <div class="form-row">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" name="user_name" placeholder="Kristian Cook" required>
+                            <input type="text" id="name" name="user_name" placeholder="Jane Smith" required>
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
                             <input type="email" id="email" name="user_email" placeholder="you@example.com" required>
                         </div>
                     </div>
-
                     <div class="form-group">
                         <label for="message">Message</label>
                         <textarea id="message" name="message" placeholder="Write your message here..."
                             required></textarea>
                     </div>
-
-                    <button type="submit" id="button" class="contact-submit-btn">
-                        Send Message &nbsp;→
-                    </button>
+                    <button type="submit" id="button" class="contact-submit-btn">Send Message →</button>
                 </form>
             </div>
-
-            <p class="contact-email-note">
-                Prefer email? Reach me directly at <a href="mailto:misttwist@icloud.com">misttwist@icloud.com</a>
-            </p>
-
         </div>
     </section>
 
-    <!-- Back to Top Button -->
-    <button id="backToTop" class="back-to-top" data-aos="fade-up" data-aos-duration="1500">
-        <i class="fa-solid fa-arrow-up"></i>
-    </button>
+    <button id="backToTop" aria-label="Back to top"><i class="fa-solid fa-arrow-up"></i></button>
 
     <footer>
         <p>© <span id="year"></span> Kristian Cook</p>
     </footer>
 
-    <!-- JavaScript libraries and initialization -->
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-        AOS.init(); // Initialize AOS
-        window.addEventListener('load', function () {
-            AOS.init(); // Initialize AOS on load
-            AOS.refresh(); // Refresh AOS to apply animations correctly
-        });
-    </script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-    <script type="text/javascript">
-        emailjs.init('k-OW5Z5AEgecgKPBy')
-    </script>
-
+    <script src="js/script.js"></script>
     <script src="js/header.js"></script>
 </body>
-<script src="js/script.js"></script>
 
 </html>
