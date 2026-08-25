@@ -35,18 +35,35 @@
     border: 1px solid var(--border);
     border-radius: 12px;
     padding: 1rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
 }
 
 .resume-embed iframe {
-    width: 100%;
+    width: 900px;
     height: 800px;
+    max-width: none;
     border: 0;
     border-radius: 8px;
     display: block;
 }
 
 @media (max-width: 768px) {
+    .resume-embed {
+        padding: 0.5rem;
+    }
+
     .resume-embed iframe {
-        height: 480px;
+        height: 600px;
+    }
+
+    .resume-embed::after {
+        content: "← scroll to see more →";
+        display: block;
+        text-align: center;
+        font-family: var(--font-mono);
+        font-size: 0.7rem;
+        color: var(--text-dim);
+        margin-top: 0.5rem;
     }
 }
